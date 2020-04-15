@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.subwayinfo.R;
+import com.example.subwayinfo.SubwayJNI;
 import com.example.subwayinfo.ui.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -73,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
+                    SubwayJNI.getInstance().hello_jni();
                     // 登陆成功 -- 跳转
                     // 跳转动作对象
                     Intent intent = new Intent();

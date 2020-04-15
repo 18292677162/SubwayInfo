@@ -21,6 +21,20 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            //生成的so文件所在路径
+            jniLibs.srcDirs = ['../libs/armeabi-v7a']
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            //androidJNI的Android.mk 路径
+            path '../JNI/Android.mk'
+        }
+    }
+
 }
 
 dependencies {
