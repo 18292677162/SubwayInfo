@@ -4,7 +4,6 @@
 #include <jni.h>
 #include <android/log.h>
 
-
 void testJNI_Hello()
 {
     __android_log_print(ANDROID_LOG_ERROR, "testjni", "JNI:hello jni");
