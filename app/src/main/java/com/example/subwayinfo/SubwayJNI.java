@@ -14,6 +14,8 @@ public class SubwayJNI {
 
     private static SubwayJNI instance = null;
 
+    public native boolean login(String username, String passwd, boolean remember);
+
     // 提供调用JNI接口方法
     public native void hello_jni();
 

@@ -9,6 +9,14 @@ extern "C" {
 #endif
 /*
  * Class:     com_example_subwayinfo_SubwayJNI
+ * Method:    login
+ * Signature: (Ljava/lang/String;Ljava/lang/String;Z)Z
+ */
+JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_login
+  (JNIEnv *, jobject, jstring, jstring, jboolean);
+
+/*
+ * Class:     com_example_subwayinfo_SubwayJNI
  * Method:    hello_jni
  * Signature: ()V
  */

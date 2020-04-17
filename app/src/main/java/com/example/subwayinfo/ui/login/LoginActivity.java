@@ -7,7 +7,6 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -33,6 +32,7 @@ import com.example.subwayinfo.ui.MainActivity;
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    private boolean register = false;
     String Tag = "Activity";
 
     @Override
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
-                    SubwayJNI.getInstance().hello_jni();
+                    // SubwayJNI.getInstance().hello_jni();
                     // 登陆成功 -- 跳转
                     // 跳转动作对象
                     Intent intent = new Intent();
@@ -128,6 +128,8 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 登录点击事件
+                register = SubwayJNI.getInstance().login("hsy", "12345", true);
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());

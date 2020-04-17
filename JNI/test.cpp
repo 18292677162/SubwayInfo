@@ -1,12 +1,11 @@
 //
 // Created by Machenike on 2020/4/13.
 //
-#include <jni.h>
-#include <android/log.h>
+#include "SubwayJNI.h"
 
 void testJNI_Hello()
 {
-    __android_log_print(ANDROID_LOG_ERROR, "testjni", "JNI:hello jni");
+    __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI:hello jni");
     return;
 }
 
