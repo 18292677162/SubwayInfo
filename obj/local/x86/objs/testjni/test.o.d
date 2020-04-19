@@ -1,5 +1,6 @@
-F:/AndroidProject/SubwayInfo/obj/local/x86/objs/testjni/test.o: \
-  F:\AndroidProject\SubwayInfo\jni\test.cpp \
-  F:\AndroidProject\SubwayInfo\jni\SubwayJNI.h
+./obj/local/x86/objs/testjni/test.o: jni\test.cpp jni\SubwayJNI.h \
+  jni\cJSON.h
 
-F:\AndroidProject\SubwayInfo\jni\SubwayJNI.h:
+jni\SubwayJNI.h:
+
+jni\cJSON.h:

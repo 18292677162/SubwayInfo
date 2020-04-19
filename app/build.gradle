@@ -12,6 +12,19 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // 声明创建so库的文件名,会自动添加lib前缀, 添加了前缀,不会自动添加
+            moduleName "testjni"
+
+            //声明启用Android日志, 在c/c++的源文件中使用的#include <android/log.h> 日志将得到输出
+            //关联两个库 liblog 和 libz
+            ldLibs "log", "z"
+
+            // 声明创建指定cpu架构的so库, 不声明的话, 默认(gradle 1.5.0)会生成7种架构,如果你的libcurl没有提供别的平台，那么就会链接失败，
+            // 此条配置很重要，只生成一个平台
+            abiFilters "armeabi-v7a"
+        }
     }
 
     buildTypes {
@@ -40,13 +53,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.navigation:navigation-fragment:2.0.0'
-    implementation 'androidx.navigation:navigation-ui:2.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.annotation:annotation:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

@@ -8,6 +8,8 @@
 #include <jni.h>
 #include <android/log.h>
 #include <stdio.h>
+#include "cJSON.h"
+#include <curl/curl.h>
 
 #define TAG "JNI"
 

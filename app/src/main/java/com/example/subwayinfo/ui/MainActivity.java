@@ -1,13 +1,10 @@
 package com.example.subwayinfo.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
 
 import com.example.subwayinfo.R;
-import com.example.subwayinfo.ui.login.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
