@@ -17,6 +17,14 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_login
 
 /*
  * Class:     com_example_subwayinfo_SubwayJNI
+ * Method:    regist
+ * Signature: (Ljava/lang/String;Ljava/lang/String;)Z
+ */
+JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_regist
+  (JNIEnv *, jobject, jstring, jstring);
+
+/*
+ * Class:     com_example_subwayinfo_SubwayJNI
  * Method:    hello_jni
  * Signature: ()V
  */

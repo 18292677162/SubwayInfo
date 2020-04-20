@@ -86,7 +86,6 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_login
     curl_easy_setopt(curl, CURLOPT_URL, "http://120.26.173.34:8888/login");
 
     // 客户端忽略CA证书认证
-    // 客户端忽略CA证书认证
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, false);
     // 开启 post
@@ -136,9 +135,10 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_login
             __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-login: login Erron!, reason = %s\n", reason->valuestring);
         } else{
             __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-login: login Erron!, reason = Unknow\n");
+            return JNI_FALSE;
         }
     }
-    return JNI_FALSE;
+    return JNI_TRUE;
 }
 #ifdef __cplusplus
 }
