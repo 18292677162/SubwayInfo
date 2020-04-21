@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <curl/curl.h>
 #include <string>
+#include "cCurl.h"
 
 #include "Json.h"
 #include "cJSON.h"

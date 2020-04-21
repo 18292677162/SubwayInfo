@@ -93,7 +93,7 @@
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_get.h \
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_get.c \
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_string_io.c \
-  jni/Json.h jni/cJSON.h
+  jni/cCurl.h jni/Json.h jni/cJSON.h
 
 jni/SubwayJNI.h:
 
@@ -288,6 +288,8 @@ D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_g
 D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_get.c:
 
 D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_string_io.c:
+
+jni/cCurl.h:
 
 jni/Json.h:
 

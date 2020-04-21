@@ -1,4 +1,4 @@
-./obj/local/armeabi-v7a/objs/testjni/Json.o: jni/Json.cpp jni/Json.h \
+./obj/local/armeabi-v7a/objs/testjni/cCurl.o: jni/cCurl.cpp jni/cCurl.h \
   jni/SubwayJNI.h \
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stdio.h \
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_cprolog.h \
@@ -93,9 +93,9 @@
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_get.h \
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_get.c \
   D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_string_io.c \
-  jni/cCurl.h jni/cJSON.h
+  jni/Json.h jni/cJSON.h
 
-jni/Json.h:
+jni/cCurl.h:
 
 jni/SubwayJNI.h:
 
@@ -291,6 +291,6 @@ D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_num_g
 
 D:/Android/android-ndk-r16b/build//../sources/cxx-stl/stlport/stlport\stl/_string_io.c:
 
-jni/cCurl.h:
+jni/Json.h:
 
 jni/cJSON.h:

@@ -78,5 +78,39 @@ public class LoginActivity extends AppCompatActivity {
                 Log.e(Tag, "登录成功");
             }
         });
+
+        bt_regist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                boolean regist_res = true;
+                // 用户名 密码
+                String username = tv_login_username.getText().toString();
+                String password = tv_login_password.getText().toString();
+
+                // 正则表达式
+                String regex_username = "^(1[3456789])\\d{9}$";
+                String regex_password = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$";
+
+                if ((username.isEmpty() == true) || (username.length() != 11) || (Pattern.compile(regex_username).matcher(username).matches() == false)) {
+                    //日志
+                    Log.e(Tag, "手机号格式不正确");
+                    //吐司
+                    Toast.makeText(getApplicationContext(), "请输入正确的手机号", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if((password.isEmpty() == true) || (Pattern.compile(regex_password).matcher(password).matches() == false)){
+                    Log.e(Tag, "密码格式不正确");
+                    Toast.makeText(getApplicationContext(), "密码格式不正确", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                SubwayJNI.getInstance().hello_jni();
+                // 注册点击事件
+                regist_res = SubwayJNI.getInstance().regist(username, password);
+
+                Log.e(Tag, "注册成功");
+            }
+        });
     }
 }

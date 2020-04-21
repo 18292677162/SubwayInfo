@@ -37,6 +37,13 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_regist
     env->ReleaseStringUTFChars(j_password, password);
 
     // 向服务器发送请求
+    cCurl curl("http://120.26.173.34:8888/regist");
+
+    if(curl.send_post(json_str)){
+        __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-regist: send_post Error!\n");
+        return JNI_FALSE;
+    }
+
     // 服务器回复 json
 
     /*
@@ -54,6 +61,26 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_regist
     */
 
     // 解析服务器返回的数据 curl.responseData();
+    string responseData = curl.responseData();
+
+    Json json_res;
+    json_res.parse(responseData);
+
+    string result = json_res.value("result");
+    if(result == "ok"){
+        // 注册成功
+        __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-regist: regist Success!\n");
+        return JNI_TRUE;
+    } else{
+        // 注册失败
+        string reason = json_res.value("reason");
+        if(reason == "")
+            // 未知错误
+            __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-regist: regist Fail! reason Unknow!\n");
+        else
+            __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-regist: regist Fail! reason = [%s]\n", reason.c_str());
+    }
+
     return JNI_TRUE;
 }
 #ifdef __cplusplus
