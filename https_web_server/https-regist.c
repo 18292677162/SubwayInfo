@@ -170,6 +170,14 @@ void regist_cb (struct evhttp_request *req, void *arg)
         is_regist_success = -1;
     }
 
+    //生成一个sessionid
+    char sessionid[SESSIONID_LEN] = {0};
+
+    create_sessionid(sessionid);
+    printf("sessionid = %s\n", sessionid);
+    // 向存储服务器发送 serHash 指令 /cache 指令
+
+    // 得到结果
 
 
     cJSON_Delete(root);

@@ -32,8 +32,10 @@
 
 #include <curl/curl.h>
 #include <cJSON.h>
+#include <uuid/uuid.h>
 
 #define RESPONSE_DATA_LEN 4096
+#define SESSIONID_LEN 256
 
 typedef struct response_data
 {
@@ -46,5 +48,9 @@ void regist_cb (struct evhttp_request *req, void *arg);
 
 size_t deal_response(void *ptr, size_t n, size_t m, void *arg);
 
+char *create_sessionid(char *sessionid);
+
+// 获取sessionid
+char *get_random_uuid(char *str);
 
 #endif
