@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.PatternMatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -68,14 +67,21 @@ public class LoginActivity extends AppCompatActivity {
                 // 登录点击事件
                 login_res = SubwayJNI.getInstance().login(username, password, true);
                 // 登陆成功 -- 跳转
-                // 跳转动作对象
-                Intent intent = new Intent();
-                // 起始、目的界面
-                intent.setClass(LoginActivity.this, MainActivity.class);
-                // 跳转
-                startActivity(intent);
-
-                Log.e(Tag, "登录成功");
+                if(login_res == true){
+                    // 跳转动作对象
+                    Intent intent = new Intent();
+                    // 禁止跳回
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    // 起始、目的界面
+                    intent.setClass(LoginActivity.this, MainActivity.class);
+                    // 跳转
+                    startActivity(intent);
+                    Log.e(Tag, "登录成功");
+                    Toast.makeText(getApplicationContext(), "登录成功，欢迎回来！", Toast.LENGTH_SHORT).show();
+                }else{
+                    Log.e(Tag, "登录失败");
+                    Toast.makeText(getApplicationContext(), "登录失败！", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -108,8 +114,11 @@ public class LoginActivity extends AppCompatActivity {
                 SubwayJNI.getInstance().hello_jni();
                 // 注册点击事件
                 regist_res = SubwayJNI.getInstance().regist(username, password);
-
-                Log.e(Tag, "注册成功");
+                if(regist_res == true){
+                    Log.e(Tag, "注册成功");
+                }else{
+                    Log.e(Tag, "注册失败");
+                }
             }
         });
     }
