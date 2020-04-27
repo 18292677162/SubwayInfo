@@ -32,10 +32,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        tv_login_username = (EditText)findViewById(R.id.tv_login_username);
-        tv_login_password = (EditText)findViewById(R.id.tv_login_passwrod);
-        bt_login = (Button)findViewById(R.id.bt_login);
-        bt_regist = (Button)findViewById(R.id.bt_register);
+        tv_login_username = (EditText) findViewById(R.id.tv_login_username);
+        tv_login_password = (EditText) findViewById(R.id.tv_login_passwrod);
+        bt_login = (Button) findViewById(R.id.bt_login);
+        bt_regist = (Button) findViewById(R.id.bt_register);
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if((password.isEmpty() == true) || (Pattern.compile(regex_password).matcher(password).matches() == false)){
+                if ((password.isEmpty() == true) || (Pattern.compile(regex_password).matcher(password).matches() == false)) {
                     Log.e(Tag, "密码格式不正确");
                     Toast.makeText(getApplicationContext(), "密码格式不正确", Toast.LENGTH_SHORT).show();
                     return;
@@ -67,18 +67,18 @@ public class LoginActivity extends AppCompatActivity {
                 // 登录点击事件
                 login_res = SubwayJNI.getInstance().login(username, password, true);
                 // 登陆成功 -- 跳转
-                if(login_res == true){
+                if (login_res == true) {
                     // 跳转动作对象
                     Intent intent = new Intent();
                     // 禁止跳回
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     // 起始、目的界面
                     intent.setClass(LoginActivity.this, MainActivity.class);
                     // 跳转
                     startActivity(intent);
                     Log.e(Tag, "登录成功");
                     Toast.makeText(getApplicationContext(), "登录成功，欢迎回来！", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Log.e(Tag, "登录失败");
                     Toast.makeText(getApplicationContext(), "登录失败！", Toast.LENGTH_SHORT).show();
                 }
@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if((password.isEmpty() == true) || (Pattern.compile(regex_password).matcher(password).matches() == false)){
+                if ((password.isEmpty() == true) || (Pattern.compile(regex_password).matcher(password).matches() == false)) {
                     Log.e(Tag, "密码格式不正确");
                     Toast.makeText(getApplicationContext(), "密码格式不正确", Toast.LENGTH_SHORT).show();
                     return;
@@ -114,12 +114,13 @@ public class LoginActivity extends AppCompatActivity {
                 SubwayJNI.getInstance().hello_jni();
                 // 注册点击事件
                 regist_res = SubwayJNI.getInstance().regist(username, password);
-                if(regist_res == true){
+                if (regist_res == true) {
                     Log.e(Tag, "注册成功");
-                }else{
+                } else {
                     Log.e(Tag, "注册失败");
                 }
             }
         });
     }
+
 }
