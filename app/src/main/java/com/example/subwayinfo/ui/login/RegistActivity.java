@@ -6,14 +6,18 @@ import com.example.subwayinfo.R;
 import com.example.subwayinfo.SubwayJNI;
 import com.mob.MobSDK;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
+import android.telephony.SmsManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.regex.Pattern;
 
@@ -29,12 +33,13 @@ public class RegistActivity extends AppCompatActivity {
     private TextView tv_password = null;
     private TextView tv_re_password = null;
     private TextView tv_SMS = null;
-    private EventHandler eH = null;
 
     String Tag = "Activity";
 
     boolean regist_res = false;
-    boolean SMS_res = false;
+    String SMS_ret = null;
+
+    String code = null;
 
     // 正则表达式
     String regex_username = "^(1[3456789])\\d{9}$";
@@ -48,6 +53,7 @@ public class RegistActivity extends AppCompatActivity {
         tv_password = findViewById(R.id.tv_regist_passwrod);
         tv_re_password = findViewById(R.id.tv_re_regist_passwrod);
         tv_SMS = findViewById(R.id.tv_SMS);
+
     }
 
 
@@ -56,40 +62,11 @@ public class RegistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regist);
 
-        MobSDK.init(this, "2ee28d8f9d3b8", "99dfea32e0b6283e158a6a108d0e471c");
 
         // 初始化控件
         Init();
 
-        // SMS注册回调
-        eH = new EventHandler() {
-            public void afterEvent(int event, int result, Object data) {
-                if (result == SMSSDK.RESULT_COMPLETE) {
-                    //回调完成
-                    if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
-                        //提交验证码成功
-                        Log.e("SMS", "提交验证码成功", null);
-                        SMS_res = true;
-                        if (regist_res == true && SMS_res == true) {
-                            Log.e(Tag, "注册成功");
-
-                            // 注册成功动作
-                        } else {
-                            Log.e(Tag, "注册失败");
-                        }
-                    } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
-                        //获取验证码成功
-                        Log.e("SMS", "获取验证码成功", null);
-                    } else {
-                        Log.e("SMS", "提交验证码失败", null);
-                        ((Throwable) data).printStackTrace();
-                    }
-                }
-            }
-        };
-
-        // 注册回调监听接口
-        SMSSDK.registerEventHandler(eH);
+        MobSDK.submitPolicyGrantResult(true, null);
 
 
         // 验证码按钮
@@ -107,12 +84,14 @@ public class RegistActivity extends AppCompatActivity {
                     return;
                 }
 
-                // 在尝试读取通信录时以弹窗提示用户（可选功能）
-                // SMSSDK.setAskPermisionOnReadContact(true);
+                //获取验证码
+
+                Log.e("发送的手机号",username.toString());
+                SMSSDK.getVerificationCode("86" , username);
 
                 // 发送验证码
-                SMSSDK.getVerificationCode("86", username);
-                Log.e(Tag, "发送验证码到 " + username, null);
+                // code = String.valueOf ((int) ((Math.random() * 9 + 1) * 100000));
+
             }
         });
 
@@ -120,12 +99,10 @@ public class RegistActivity extends AppCompatActivity {
         bt_regist_regist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 // 用户名 密码
                 String username = tv_username.getText().toString();
                 String password = tv_password.getText().toString();
                 String re_password = tv_re_password.getText().toString();
-
 
                 if ((username.isEmpty() == true) || (username.length() != 11) || (Pattern.compile(regex_username).matcher(username).matches() == false)) {
                     //日志
@@ -141,7 +118,7 @@ public class RegistActivity extends AppCompatActivity {
                     return;
                 }
 
-                if(password != re_password){
+                if(!password.equals(re_password)){
                     Log.e(Tag, "密码格式不正确");
                     Toast.makeText(getApplicationContext(), "两次输入的密码不一致, 请重新输入", Toast.LENGTH_SHORT).show();
                     tv_password.setText("");
@@ -150,21 +127,95 @@ public class RegistActivity extends AppCompatActivity {
                 }
 
                 SubwayJNI.getInstance().hello_jni();
+                Log.e("验证码是:" , code ,null);
 
-                // 注册点击事件
-                regist_res = SubwayJNI.getInstance().regist(username, password);
+                //提交验证码验证
+                SMSSDK.submitVerificationCode("86",username,tv_SMS.getText().toString());
 
-                // 提交验证码，其中的code表示验证码，如“1357”
-                SMSSDK.submitVerificationCode("86", username, tv_SMS.getText().toString());
+
             }
-
         });
+
+        EventHandler handler = new EventHandler(){
+            @Override
+            public void afterEvent(int event, int result, Object data) {
+                if (result == SMSSDK.RESULT_COMPLETE){
+
+                    //回调完成
+                    if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
+                        //提交验证码成功
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(RegistActivity.this,"验证成功",Toast.LENGTH_SHORT).show();
+                                // 用户名 密码
+                                String username = tv_username.getText().toString();
+                                String password = tv_password.getText().toString();
+                                // 注册
+                                regist_res = SubwayJNI.getInstance().regist(username, password);
+                                if (regist_res == true){
+                                    // 注册成功 跳转
+                                    Toast.makeText(getApplicationContext(), "注册成功", Toast.LENGTH_SHORT).show();
+                                    // 跳转动作对象
+                                    Intent intent2 = new Intent();
+                                    // 禁止跳回
+                                    intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    // 起始、目的界面
+                                    intent2.setClass(RegistActivity.this, LoginActivity.class);
+                                    // 跳转
+                                    startActivity(intent2);
+                                }
+                                Toast.makeText(getApplicationContext(), "注册失败", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }else if (event == SMSSDK.EVENT_GET_VOICE_VERIFICATION_CODE){
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(RegistActivity.this,"语音验证发送",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                    else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE){
+                        //获取验证码成功
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(RegistActivity.this,"验证码已发送",Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES){
+                        Log.i("test","test");
+                    }
+                }else{
+                    ((Throwable)data).printStackTrace();
+                    Throwable throwable = (Throwable) data;
+                    throwable.printStackTrace();
+                    Log.e(Tag,throwable.toString());
+                    try {
+                        JSONObject obj = new JSONObject(throwable.getMessage());
+                        final String des = obj.optString("detail");
+                        if (!TextUtils.isEmpty(des)){
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(RegistActivity.this,des,Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
+
+
+        SMSSDK.registerEventHandler(handler);
     }
 
     @Override
     protected void onDestroy(){
-        // 销毁
-        SMSSDK.unregisterEventHandler(eH);
         super.onDestroy();
     }
 }

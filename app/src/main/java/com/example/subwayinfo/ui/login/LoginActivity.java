@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.example.subwayinfo.R;
 import com.example.subwayinfo.SubwayJNI;
 import com.example.subwayinfo.ui.MainActivity;
-import com.mob.MobSDK;
 
 import java.util.regex.Pattern;
 
@@ -40,9 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         bt_login = (Button) findViewById(R.id.bt_login);
         bt_regist = (Button) findViewById(R.id.bt_register);
 
-        // 获取权限
-        MobSDK.submitPolicyGrantResult(true, null);
-        Log.e("MobSDK: ", "获取隐私权限成功", null);
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "请输入正确的手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 if ((password.isEmpty() == true) || (Pattern.compile(regex_password).matcher(password).matches() == false)) {
                     Log.e(Tag, "密码格式不正确");
                     Toast.makeText(getApplicationContext(), "密码格式不正确", Toast.LENGTH_SHORT).show();
