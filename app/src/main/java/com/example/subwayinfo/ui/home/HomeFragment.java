@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.InputQueue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,10 +43,10 @@ import com.amap.api.services.route.RouteSearch;
 import com.amap.api.services.route.WalkRouteResult;
 import com.example.subwayinfo.R;
 import com.example.subwayinfo.overlay.BusRouteOverlay;
-import com.example.subwayinfo.overlay.RouteOverlay;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.IntToDoubleFunction;
 
 
 public class HomeFragment extends Fragment {
@@ -86,13 +85,18 @@ public class HomeFragment extends Fragment {
         //在activity执行onCreate时执行mapView.onCreate(savedInstanceState)，创建地图
         _mapView.onCreate(savedInstanceState);
 
-        /*
+
+        // Todo 定位点设置
         myLocationStyle = new MyLocationStyle();
-        //初始化定位蓝点样式类myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);//连续定位、且将视角移动到地图中心点，定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）如果不设置myLocationType，默认也会执行此种模式
+        // 只定位一次
+        myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE);
+        //连续定位、蓝点不会移动到地图中心点，定位点依照设备方向旋转，并且蓝点会跟随设备移动
+        myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE_NO_CENTER);
+        //连续定位、且将视角移动到地图中心点，定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）默认执行此种模式
         myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);
         myLocationStyle.radiusFillColor(0);
         myLocationStyle.strokeColor(0);
-        */
+
 
         // 操控地图,获取地图对象
         _amap = _mapView.getMap();
@@ -125,7 +129,7 @@ public class HomeFragment extends Fragment {
     protected void addMarkerToMap(double latitude, double longitude){
         _selfMarker = _amap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude))
                 .icon(BitmapDescriptorFactory.fromBitmap(
-                        BitmapFactory.decodeResource(getResources(), R.drawable.navi_map_gps_locked))
+                        BitmapFactory.decodeResource(getResources(), R.drawable.poi_marker_pressed))
                 ));
     }
 
@@ -137,7 +141,7 @@ public class HomeFragment extends Fragment {
         _amapLocationOption = new AMapLocationClientOption();
 
         // 10秒定位一次
-        _amapLocationOption.setInterval(2000);
+        _amapLocationOption.setInterval(3000);
 
         // 将 option 设置给 client 对象
         _amapLocationClient.setLocationOption(_amapLocationOption);
@@ -159,7 +163,8 @@ public class HomeFragment extends Fragment {
                         // 添加标记
 
                         if(isAddSelfMarker == false){
-                            addMarkerToMap(aMapLocation.getLatitude(), aMapLocation.getLongitude());
+                            // Todo:
+                            // addMarkerToMap(aMapLocation.getLatitude(), aMapLocation.getLongitude());
                             isAddSelfMarker = true;
 
                             // 以自我我中心展示地图
@@ -220,7 +225,8 @@ public class HomeFragment extends Fragment {
                 );
 
                 // 删除之前路径
-                _amap.clear();
+                // ToDo:
+                // _amap.clear();
 
                 // 缩放路径
                 busRouteOverlay.zoomToSpan();
@@ -257,6 +263,11 @@ public class HomeFragment extends Fragment {
         _bt_route.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                _amap.clear();
+
+
                 // 搜索POI兴趣点
                 Log.e("Amap", "button onclick");
                 // 拿到搜索关键字
@@ -293,12 +304,14 @@ public class HomeFragment extends Fragment {
                             _endPoint = new LatLonPoint(item.getLatLonPoint().getLatitude(),
                                     item.getLatLonPoint().getLongitude());
 
-                            drawPoute();
                             // 默认选取第一个点
                             if(index == 0){
-                                break;
+                                drawPoute();
                             }
+
+
                         }
+
                     }
 
                     @Override
@@ -394,10 +407,10 @@ public class HomeFragment extends Fragment {
         createMap(savedInstanceState);
 
         // 小蓝点定位
-        /*
+        _amap.animateCamera(CameraUpdateFactory.zoomBy(16));
         _amap.setMyLocationStyle(myLocationStyle);
         _amap.setMyLocationEnabled(true);
-         */
+
 
         doLocation();
 

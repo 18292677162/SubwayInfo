@@ -23,7 +23,7 @@ android {
 
             // 声明创建指定cpu架构的so库, 不声明的话, 默认(gradle 1.5.0)会生成7种架构,如果你的libcurl没有提供别的平台，那么就会链接失败，
             // 此条配置很重要，只生成一个平台
-            abiFilters "armeabi-v7a"
+            abiFilters "armeabi"
         }
     }
 
@@ -39,7 +39,7 @@ android {
     sourceSets {
         main {
             //生成的so文件所在路径
-            jniLibs.srcDirs = ['../libs/armeabi-v7a']
+            jniLibs.srcDirs = ['../libs/armeabi', "./AMapLibs"]
         }
     }
 
@@ -52,9 +52,19 @@ android {
 
 }
 
+apply plugin: "com.mob.sdk"
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "2ee28d8f9d3b8"
+    appSecret "99dfea32e0b6283e158a6a108d0e471c"
+    SMSSDK {
+        gui false
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation 'com.yunpian:captcha:1.0.4'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
@@ -66,4 +76,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation files('libs/AMap3DMap_7.4.0_AMapNavi_7.4.0_AMapSearch_7.3.0_AMapLocation_4.9.0_20200416.jar')
 }

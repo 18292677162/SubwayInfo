@@ -2,12 +2,14 @@ package com.example.subwayinfo.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.subwayinfo.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.subwayinfo.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -40,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
         });
         */
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.navigation_view);
         // 将每个菜单ID作为一组ID传递，因为每个菜单都应被视为顶级目的地
+
 
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -52,6 +55,28 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.line1:
+                Toast.makeText(MainActivity.this, "一号线", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.line2:
+                Toast.makeText(MainActivity.this, "二号线", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.line3:
+                Toast.makeText(MainActivity.this, "三号线", Toast.LENGTH_LONG).show();
+                break;
+            case R.id.line4:
+                Toast.makeText(MainActivity.this, "四号线", Toast.LENGTH_LONG).show();
+                break;
+            default:
+                Toast.makeText(MainActivity.this, "选择错误", Toast.LENGTH_LONG).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

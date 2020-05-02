@@ -2,8 +2,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/line1"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="一号线"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/line2"
+        android:orderInCategory="100"
+        android:title="二号线"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/line3"
+        android:orderInCategory="100"
+        android:title="三号线"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/line4"
+        android:orderInCategory="100"
+        android:title="四号线"
+        app:showAsAction="never" />
+
 </menu>
