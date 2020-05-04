@@ -9,7 +9,6 @@ cCurl::cCurl(string url){
     curl_easy_setopt(this->_curl, CURLOPT_URL, url.c_str());
 }
 
-
 cCurl::~cCurl()
 {
     curl_easy_cleanup(this->_curl);
