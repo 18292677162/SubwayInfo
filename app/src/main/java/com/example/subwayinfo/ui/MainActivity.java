@@ -1,7 +1,12 @@
 package com.example.subwayinfo.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.AttributeSet;
+import android.view.InflateException;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +17,7 @@ import com.example.subwayinfo.R;
 import com.example.subwayinfo.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        // getSupportActionBar().setDisplayShowTitleEnabled(false);//隐藏标题
         // FloatingActionButton fab = findViewById(R.id.fab);
         // 圆圈点击事件
         /*
@@ -44,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
         // 将每个菜单ID作为一组ID传递，因为每个菜单都应被视为顶级目的地
-
 
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -62,18 +68,41 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.line1:
                 Toast.makeText(MainActivity.this, "一号线", Toast.LENGTH_LONG).show();
+                // 跳转动作对象
+                Intent intent = new Intent();
+                // 起始、目的界面
+                intent.setClass(MainActivity.this, Line1Activity.class);
+                // 跳转
+                startActivity(intent);
                 break;
             case R.id.line2:
                 Toast.makeText(MainActivity.this, "二号线", Toast.LENGTH_LONG).show();
+                // 跳转动作对象
+                Intent intent1 = new Intent();
+                // 起始、目的界面
+                intent1.setClass(MainActivity.this, Line2Activity.class);
+                // 跳转
+                startActivity(intent1);
                 break;
             case R.id.line3:
                 Toast.makeText(MainActivity.this, "三号线", Toast.LENGTH_LONG).show();
+                // 跳转动作对象
+                Intent intent2 = new Intent();
+                // 起始、目的界面
+                intent2.setClass(MainActivity.this, Line3Activity.class);
+                // 跳转
+                startActivity(intent2);
                 break;
             case R.id.line4:
                 Toast.makeText(MainActivity.this, "四号线", Toast.LENGTH_LONG).show();
+                // 跳转动作对象
+                Intent intent3 = new Intent();
+                // 起始、目的界面
+                intent3.setClass(MainActivity.this, Line4Activity.class);
+                // 跳转
+                startActivity(intent3);
                 break;
             default:
-                Toast.makeText(MainActivity.this, "选择错误", Toast.LENGTH_LONG).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -92,6 +121,4 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
-
 }
