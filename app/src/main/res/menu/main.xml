@@ -2,31 +2,59 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <item
+    <item android:title="一号线">
+        <menu >
+            <item
+                android:title="沣河森林公园"
+                android:id="@+id/line1_fhslgy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="北槐"
+                android:id="@+id/line1_bh"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="上林路"
+                android:id="@+id/line1_sll"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="沣东自贸园"
+                android:id="@+id/line1_fdzmy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item android:title="苹果"/>
+            <item android:title="橘子"/>
+        </menu>
+    </item>
+    <item android:title="二号线">
+        <menu >
+            <item android:title="香蕉"/>
+            <item android:title="苹果"/>
+            <item android:title="橘子"/>
+        </menu>
+    </item>
+    <item android:title="三号线">
+        <menu >
+            <item android:title="香蕉"/>
+            <item android:title="苹果"/>
+            <item android:title="橘子"/>
+        </menu>
+    </item>
+    <item android:title="四号线">
+        <menu >
+            <item android:title="香蕉"/>
+            <item android:title="苹果"/>
+            <item android:title="橘子"/>
+        </menu>
+    </item>
+        <!--
         android:id="@+id/line1"
         android:orderInCategory="100"
         android:title="一号线"
         app:showAsAction="never" />
+        -->
 
-    <item
-        android:id="@+id/line2"
-        android:orderInCategory="100"
-        android:title="二号线"
-        app:showAsAction="never" />
-
-
-    <item
-        android:id="@+id/line3"
-        android:orderInCategory="100"
-        android:title="三号线"
-        app:showAsAction="never" />
-
-
-    <item
-        android:id="@+id/line4"
-        android:orderInCategory="100"
-        android:title="四号线"
-        app:showAsAction="never" />
 
 </menu>

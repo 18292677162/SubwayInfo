@@ -1,23 +1,19 @@
 package com.example.subwayinfo.ui;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.AttributeSet;
-import android.view.InflateException;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.subwayinfo.R;
-import com.example.subwayinfo.ui.login.LoginActivity;
+import com.example.subwayinfo.ui.station.line1.Line1_bh_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_fdzmy_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_fhslgy_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_sll_Activity;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -27,8 +23,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-
     private AppBarConfiguration mAppBarConfiguration;
+    private ImageButton bt_star = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +32,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // getSupportActionBar().setDisplayShowTitleEnabled(false);//隐藏标题
-        // FloatingActionButton fab = findViewById(R.id.fab);
-        // 圆圈点击事件
-        /*
-        fab.setOnClickListener(new View.OnClickListener() {
+
+/*
+        bt_star = findViewById(R.id.bt_star);
+        bt_star.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                // 跳转动作对象
+                Intent intent1 = new Intent();
+                // 起始、目的界面
+                intent1.setClass(MainActivity.this, Line1_fhslgy_Activity.class);
+                // 跳转
+                startActivity(intent1);
             }
         });
-        */
+
+ */
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.navigation_view);
         // 将每个菜单ID作为一组ID传递，因为每个菜单都应被视为顶级目的地
@@ -65,42 +65,33 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent();
         switch (item.getItemId()) {
-            case R.id.line1:
-                Toast.makeText(MainActivity.this, "一号线", Toast.LENGTH_LONG).show();
-                // 跳转动作对象
-                Intent intent = new Intent();
+            case R.id.line1_fhslgy:
+                Toast.makeText(MainActivity.this, "一号线-沣河森林公园", Toast.LENGTH_LONG).show();
                 // 起始、目的界面
-                intent.setClass(MainActivity.this, Line1Activity.class);
+                intent.setClass(MainActivity.this, Line1_fhslgy_Activity.class);
                 // 跳转
                 startActivity(intent);
                 break;
-            case R.id.line2:
-                Toast.makeText(MainActivity.this, "二号线", Toast.LENGTH_LONG).show();
-                // 跳转动作对象
-                Intent intent1 = new Intent();
+            case R.id.line1_bh:
+                Toast.makeText(MainActivity.this, "一号线-北槐", Toast.LENGTH_LONG).show();
                 // 起始、目的界面
-                intent1.setClass(MainActivity.this, Line2Activity.class);
+                intent.setClass(MainActivity.this, Line1_bh_Activity.class);
                 // 跳转
-                startActivity(intent1);
+                startActivity(intent);
                 break;
-            case R.id.line3:
-                Toast.makeText(MainActivity.this, "三号线", Toast.LENGTH_LONG).show();
-                // 跳转动作对象
-                Intent intent2 = new Intent();
-                // 起始、目的界面
-                intent2.setClass(MainActivity.this, Line3Activity.class);
+            case R.id.line1_sll:
+                Toast.makeText(MainActivity.this, "一号线-上林路", Toast.LENGTH_LONG).show();
+                intent.setClass(MainActivity.this, Line1_sll_Activity.class);
                 // 跳转
-                startActivity(intent2);
-                break;
-            case R.id.line4:
-                Toast.makeText(MainActivity.this, "四号线", Toast.LENGTH_LONG).show();
-                // 跳转动作对象
-                Intent intent3 = new Intent();
+                startActivity(intent);
+            case R.id.line1_fdzmy:
+                Toast.makeText(MainActivity.this, "一号线-沣东自贸园", Toast.LENGTH_LONG).show();
                 // 起始、目的界面
-                intent3.setClass(MainActivity.this, Line4Activity.class);
+                intent.setClass(MainActivity.this, Line1_fdzmy_Activity.class);
                 // 跳转
-                startActivity(intent3);
+                startActivity(intent);
                 break;
             default:
                 break;

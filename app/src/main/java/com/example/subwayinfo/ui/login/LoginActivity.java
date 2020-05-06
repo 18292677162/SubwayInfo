@@ -20,6 +20,8 @@ import com.example.subwayinfo.R;
 import com.example.subwayinfo.SubwayJNI;
 import com.example.subwayinfo.ui.MainActivity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
@@ -34,6 +36,21 @@ public class LoginActivity extends AppCompatActivity {
 
     String Tag = "Activity";
 
+    String[] permissions = new String[]{
+            Manifest.permission.INTERNET,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_NETWORK_STATE,
+            Manifest.permission.ACCESS_WIFI_STATE,
+            Manifest.permission.CHANGE_WIFI_STATE,
+            Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS,
+            Manifest.permission.READ_CONTACTS,};
+    //2、创建一个mPermissionList，逐个判断哪些权限未授予，未授予的权限存储到mPerrrmissionList中
+    List<String> mPermissionList = new ArrayList<>();
+
+    private final int mRequestCode = 100;//权限请求码
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +62,10 @@ public class LoginActivity extends AppCompatActivity {
         bt_login = (Button) findViewById(R.id.bt_login);
         bt_regist = (Button) findViewById(R.id.bt_register);
 
-        GetPermission();
+        //获取权限
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            initPermission();
+        }
 
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,120 +132,24 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void GetPermission()
-    {
-        // 获取权限
+    //权限判断和申请
+    private void initPermission() {
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.INTERNET)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, 1);
-                }
+        mPermissionList.clear();//清空没有通过的权限
+
+        //逐个判断你要的权限是否已经通过
+        for (int i = 0; i < permissions.length; i++) {
+            if (ContextCompat.checkSelfPermission(this, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
+                mPermissionList.add(permissions[i]);//添加还未授予的权限
             }
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-                }
-            }
+        //申请权限
+        if (mPermissionList.size() > 0) {//有权限没有通过，需要申请
+            ActivityCompat.requestPermissions(this, permissions, mRequestCode);
+        }else{
+            //说明权限都已经通过，可以做你想做的事情去
         }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_PHONE_STATE)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 1);
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_NETWORK_STATE)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_NETWORK_STATE}, 1);
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_WIFI_STATE) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_WIFI_STATE)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_WIFI_STATE}, 1);
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CHANGE_WIFI_STATE) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CHANGE_WIFI_STATE)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CHANGE_WIFI_STATE}, 1);
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS) != PackageManager.PERMISSION_GRANTED) {
-                // 检查权限状态
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS)) {
-                    //  用户彻底拒绝授予权限，一般会提示用户进入设置权限界面
-                } else {
-                    //  用户未彻底拒绝授予权限
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS}, 1);
-                }
-            }
-        }
-
-
-
     }
 
 }

@@ -86,7 +86,7 @@ public class HomeFragment extends Fragment {
         _mapView.onCreate(savedInstanceState);
 
 
-        // Todo 定位点设置
+        // Todo
         myLocationStyle = new MyLocationStyle();
         // 只定位一次
         myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE);
@@ -178,7 +178,7 @@ public class HomeFragment extends Fragment {
                             _startPoint = new LatLonPoint(aMapLocation.getLatitude(), aMapLocation.getLongitude());
                         }
 
-                        //设置乘客源地址信息
+                        //设置用户地址信息
                         _atv_start.setText(aMapLocation.getAddress());
 
                         _city = aMapLocation.getCity();
