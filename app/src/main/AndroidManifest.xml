@@ -23,10 +23,10 @@
         android:roundIcon="@mipmap/subway_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.station.line1.Line1_fdzmy_Activity"></activity>
-        <activity android:name=".ui.station.line1.Line1_sll_Activity" />
-        <activity android:name=".ui.station.line1.Line1_bh_Activity" />
-        <activity android:name=".ui.station.line1.Line1_fhslgy_Activity" />
+        <activity android:name=".ui.station.line1.Line1_zy_Activity"></activity>
+        <activity android:name=".ui.station.line1.Line1_zh_Activity" />
+        <activity android:name=".ui.station.line1.Line1_sq_Activity" />
+        <activity android:name=".ui.station.line1.Line1_hwz_Activity" />
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

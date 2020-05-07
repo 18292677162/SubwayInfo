@@ -86,33 +86,29 @@ public class HomeFragment extends Fragment {
         _mapView.onCreate(savedInstanceState);
 
 
-        // Todo
+
         myLocationStyle = new MyLocationStyle();
         // 只定位一次
         myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE);
         //连续定位、蓝点不会移动到地图中心点，定位点依照设备方向旋转，并且蓝点会跟随设备移动
         myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE_NO_CENTER);
         //连续定位、且将视角移动到地图中心点，定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）默认执行此种模式
-        myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);
+        // myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);
         myLocationStyle.radiusFillColor(0);
         myLocationStyle.strokeColor(0);
 
 
-        // 操控地图,获取地图对象
-        _amap = _mapView.getMap();
+
         // 交通状况
         _amap.setTrafficEnabled(true);
-        // 得到 UI settings
-        _uiSettings = _amap.getUiSettings();
         // 指南针
-        _uiSettings.setCompassEnabled(true);
+        _amap.getUiSettings().setCompassEnabled(true);
         // 缩放按钮
-        _uiSettings.setZoomControlsEnabled(false);
+        _amap.getUiSettings().setZoomControlsEnabled(false);
         // 比例尺
-        _uiSettings.setScaleControlsEnabled(true);
+        _amap.getUiSettings().setScaleControlsEnabled(true);
         //_amap.setLocationSource(this);//通过aMap对象设置定位数据源的监听
-        _uiSettings.setMyLocationButtonEnabled(false); //显示默认的定位按钮
-
+        _amap.getUiSettings().setMyLocationButtonEnabled(false); //显示默认的定位按钮
 
     }
 
@@ -178,7 +174,7 @@ public class HomeFragment extends Fragment {
                             _startPoint = new LatLonPoint(aMapLocation.getLatitude(), aMapLocation.getLongitude());
                         }
 
-                        //设置用户地址信息
+                        //设置乘客源地址信息
                         _atv_start.setText(aMapLocation.getAddress());
 
                         _city = aMapLocation.getCity();
@@ -403,6 +399,9 @@ public class HomeFragment extends Fragment {
 
         // 关联地图空间
         _mapView = view.findViewById(R.id.home_map);
+        // 操控地图,获取地图对象
+        _amap = _mapView.getMap();
+
 
         createMap(savedInstanceState);
 

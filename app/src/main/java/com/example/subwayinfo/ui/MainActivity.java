@@ -8,10 +8,10 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.subwayinfo.R;
-import com.example.subwayinfo.ui.station.line1.Line1_bh_Activity;
-import com.example.subwayinfo.ui.station.line1.Line1_fdzmy_Activity;
-import com.example.subwayinfo.ui.station.line1.Line1_fhslgy_Activity;
-import com.example.subwayinfo.ui.station.line1.Line1_sll_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_sq_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_zy_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_hwz_Activity;
+import com.example.subwayinfo.ui.station.line1.Line1_zh_Activity;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 // 跳转动作对象
                 Intent intent1 = new Intent();
                 // 起始、目的界面
-                intent1.setClass(MainActivity.this, Line1_fhslgy_Activity.class);
+                intent1.setClass(MainActivity.this, Line1_hwz_Activity.class);
                 // 跳转
                 startActivity(intent1);
             }
@@ -67,29 +67,29 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = new Intent();
         switch (item.getItemId()) {
-            case R.id.line1_fhslgy:
-                Toast.makeText(MainActivity.this, "一号线-沣河森林公园", Toast.LENGTH_LONG).show();
+            case R.id.line1_hwz:
+                Toast.makeText(MainActivity.this, "一号线-后卫寨", Toast.LENGTH_LONG).show();
                 // 起始、目的界面
-                intent.setClass(MainActivity.this, Line1_fhslgy_Activity.class);
+                intent.setClass(MainActivity.this, Line1_hwz_Activity.class);
                 // 跳转
                 startActivity(intent);
                 break;
-            case R.id.line1_bh:
-                Toast.makeText(MainActivity.this, "一号线-北槐", Toast.LENGTH_LONG).show();
+            case R.id.line1_sq:
+                Toast.makeText(MainActivity.this, "一号线-三桥", Toast.LENGTH_LONG).show();
                 // 起始、目的界面
-                intent.setClass(MainActivity.this, Line1_bh_Activity.class);
+                intent.setClass(MainActivity.this, Line1_sq_Activity.class);
                 // 跳转
                 startActivity(intent);
                 break;
-            case R.id.line1_sll:
-                Toast.makeText(MainActivity.this, "一号线-上林路", Toast.LENGTH_LONG).show();
-                intent.setClass(MainActivity.this, Line1_sll_Activity.class);
+            case R.id.line1_zh:
+                Toast.makeText(MainActivity.this, "一号线-皂河", Toast.LENGTH_LONG).show();
+                intent.setClass(MainActivity.this, Line1_zh_Activity.class);
                 // 跳转
                 startActivity(intent);
-            case R.id.line1_fdzmy:
-                Toast.makeText(MainActivity.this, "一号线-沣东自贸园", Toast.LENGTH_LONG).show();
+            case R.id.line1_zy:
+                Toast.makeText(MainActivity.this, "一号线-枣园", Toast.LENGTH_LONG).show();
                 // 起始、目的界面
-                intent.setClass(MainActivity.this, Line1_fdzmy_Activity.class);
+                intent.setClass(MainActivity.this, Line1_zy_Activity.class);
                 // 跳转
                 startActivity(intent);
                 break;

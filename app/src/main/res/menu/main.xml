@@ -5,27 +5,65 @@
     <item android:title="一号线">
         <menu >
             <item
-                android:title="沣河森林公园"
-                android:id="@+id/line1_fhslgy"
+                android:title="后卫寨"
+                android:id="@+id/line1_hwz"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
             <item
-                android:title="北槐"
-                android:id="@+id/line1_bh"
+                android:title="三桥"
+                android:id="@+id/line1_sq"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
             <item
-                android:title="上林路"
-                android:id="@+id/line1_sll"
+                android:title="皂河"
+                android:id="@+id/line1_zh"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
             <item
-                android:title="沣东自贸园"
-                android:id="@+id/line1_fdzmy"
+                android:title="枣园"
+                android:id="@+id/line1_zy"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
-            <item android:title="苹果"/>
-            <item android:title="橘子"/>
+            <item
+                android:title="汉城路"
+                android:id="@+id/line1_hcl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="开远门"
+                android:id="@+id/line1_kym"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="劳动路"
+                android:id="@+id/line1_ldl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="玉祥门"
+                android:id="@+id/line1_yxm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="洒金桥"
+                android:id="@+id/line1_sjq"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="北大街"
+                android:id="@+id/line1_bdj"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="五路口"
+                android:id="@+id/line1_wlk"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="朝阳门"
+                android:id="@+id/line1_cym"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
         </menu>
     </item>
     <item android:title="二号线">

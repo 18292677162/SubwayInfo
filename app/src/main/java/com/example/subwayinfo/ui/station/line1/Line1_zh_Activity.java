@@ -1,16 +1,15 @@
-package com.example.subwayinfo.ui;
+package com.example.subwayinfo.ui.station.line1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
 import com.example.subwayinfo.R;
 
-public class Line2Activity extends AppCompatActivity {
+public class Line1_zh_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_line2);
+        setContentView(R.layout.activity_line1_zh);
     }
 }
