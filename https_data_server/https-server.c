@@ -1,4 +1,6 @@
 #include "util.h"
+#include "remote_store.h"
+#include "config.h"
 
 #define MYHTTPD_SIGNATURE  "MoCarHttpd v0.1"
 
@@ -112,8 +114,8 @@ static int serve_some_http (void)
     /* 设置http回调函数 */
     //默认回调
     //专属uri路径回调
-    evhttp_set_cb(http, "/persistent", persistent_cb, NULL);
-    evhttp_set_cb(http, "/cache", cache_cb, NULL);
+    evhttp_set_cb(http, "/persistent", persistent_store_cb, NULL);
+    evhttp_set_cb(http, "/cache", cache_store_cb, NULL);
 
     /* 设置监听IP和端口 */
     handle = evhttp_bind_socket_with_handle (http, "0.0.0.0", serverPort);

@@ -1,6 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <dirent.h>
+
+#include <openssl/ssl.h>
+#include <openssl/err.h>
+
+#include <event2/bufferevent.h>
+#include <event2/bufferevent_ssl.h>
+#include <event2/event.h>
+#include <event2/http.h>
+#include <event2/buffer.h>
+#include <event2/util.h>
+#include <event2/keyvalq_struct.h>
+
+#include <cJSON.h>
+
+#include "https-common.h"
+#include "remote_store.h"
 #include "util.h"
 
-void persistent_cb(struct evhttp_request *req, void *arg)
+void persistent_store_cb(struct evhttp_request *req, void *arg)
 { 
     struct evbuffer *evb = NULL;
     const char *uri = evhttp_request_get_uri (req);
@@ -13,6 +39,7 @@ void persistent_cb(struct evhttp_request *req, void *arg)
         if (buf == NULL) return;
         evbuffer_add_printf(buf, "Requested: %s\n", uri);
         evhttp_send_reply(req, HTTP_OK, "OK", buf);
+        LOG(LOG_MODULE_SERVER_DATA, LOG_PROC_PERSISTENT, "get uri:%s\n", uri);
         return;
     }
 
@@ -23,7 +50,7 @@ void persistent_cb(struct evhttp_request *req, void *arg)
         return;
     }
 
-    printf ("Got a POST request for <%s>\n", uri);
+    LOG(LOG_MODULE_SERVER_DATA, LOG_PROC_PERSISTENT, "Got a POST request for <%s>\n", uri);
 
     //判断此URI是否合法
     decoded = evhttp_uri_parse (uri);
@@ -49,6 +76,8 @@ void persistent_cb(struct evhttp_request *req, void *arg)
        具体的：可以根据Post的参数执行相应操作，然后将结果输出
        ...
     */
+    char *response_data = NULL;
+    response_data = deal_persistent(request_data_buf);
     //unpack json
     // 插入数据库
     /*
@@ -63,47 +92,6 @@ void persistent_cb(struct evhttp_request *req, void *arg)
         password: "123456"
     }
     */
-    cJSON* root = cJSON_Parse(request_data_buf);
-    cJSON* cmd = cJSON_GetObjectItem(root, "cmd");
-    cJSON* busi = cJSON_GetObjectItem(root, "busi");
-    cJSON* table = cJSON_GetObjectItem(root, "table");
-    cJSON* username = cJSON_GetObjectItem(root, "username");
-    cJSON* password = cJSON_GetObjectItem(root, "password");
-
-    char cmd_val[16] = {0};
-    char table_val[64] = {0};
-    strcpy(cmd_val, cmd->valuestring);
-    strcpy(table_val, table->valuestring);
-
-    printf("cmd = %s\n", cmd->valuestring);
-    printf("busi = %s\n", busi->valuestring);
-    printf("table = %s\n", table->valuestring);
-    printf("username = %s\n", username->valuestring);
-    printf("password = %s\n", password->valuestring);
-
-    cJSON_Delete(root);
-	// 插入数据库
-	
-    int deal_cmd_result = 0;//0 suss, -1 fail
-
-    //packet json
-    root = cJSON_CreateObject();
-    if(deal_cmd_result == 0){
-    	cJSON_AddStringToObject(root, "result", "ok");  	
-    }
-    else{
-    	cJSON_AddStringToObject(root, "result", "error"); 
-    	char reason_val[256] = {0};
-    	sprintf(reason_val, "cmd: %s, table: %s error\n", cmd_val, table_val);
-    	cJSON_AddStringToObject(root, "reason", reason_val);
-
-    }
-    //cJSON_AddStringToObject(root, "sessionid", "xxxxxxxx");
-
-    char *response_data = cJSON_Print(root);
-    cJSON_Delete(root);
-
-
 
     /* This holds the content we're sending. */
 
@@ -122,9 +110,10 @@ void persistent_cb(struct evhttp_request *req, void *arg)
     if (evb)
         evbuffer_free (evb);
 
+    if (response_data != NULL) {
+        LOG(LOG_MODULE_SERVER_DATA, LOG_PROC_PERSISTENT, "[response]:\n");
+        LOG(LOG_MODULE_SERVER_DATA, LOG_PROC_PERSISTENT, "%s\n", response_data);
 
-    printf("[response]:\n");
-    printf("%s\n", response_data);
-
-    free(response_data);
+        free(response_data);
+    }
 }

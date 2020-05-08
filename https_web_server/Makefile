@@ -11,7 +11,7 @@ src = $(wildcard *.c)
 obj = $(patsubst %.c, %.o, $(src))
 
 
-server=server
+server=web_server
 
 target=$(server)
 
@@ -25,7 +25,7 @@ $(obj):%.o:%.c
 
 
 #test_main程序
-$(server): https-server.o https-common.o cJSON.o https-login.o https-regist.o util.o
+$(server): https-server.o https-common.o cJSON.o https-login.o https-regist.o util.o make_log.o remote_store.o
 	$(CC) $^ -o $@ $(LIBS)
 
 

@@ -1,0 +1,526 @@
+===20200508-011545,deal_cache[309]=== cmd = setHash
+
+===20200508-011545,deal_cache_setHash[280]=== redis connect error :
+
+===20200508-011545,cache_store_cb[105]=== [response]:
+
+===20200508-011545,cache_store_cb[106]=== {
+	"result":	"error",
+	"reason":	"set hash ERROR"
+}
+
+===20200508-012901,deal_cache[309]=== cmd = setHash
+
+===20200508-012901,deal_cache_setHash[280]=== redis connect error :
+
+===20200508-012901,cache_store_cb[105]=== [response]:
+
+===20200508-012901,cache_store_cb[106]=== {
+	"result":	"error",
+	"reason":	"set hash ERROR"
+}
+
+===20200508-013058,deal_cache[309]=== cmd = setHash
+
+===20200508-013058,cache_store_cb[105]=== [response]:
+
+===20200508-013058,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-013058,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-013058,deal_cache_setLifecycle[21]=== key = online-user-57c91bea-a652-4d56-9e57-a7b074d93846, lifecycle = 600
+
+===20200508-013058,cache_store_cb[105]=== [response]:
+
+===20200508-013058,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014201,deal_cache[309]=== cmd = setHash
+
+===20200508-014201,cache_store_cb[105]=== [response]:
+
+===20200508-014201,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014201,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-014201,deal_cache_setLifecycle[21]=== key = online-user-3f45b34c-5893-41b9-9e54-3c8c81b1185c, lifecycle = 600
+
+===20200508-014201,cache_store_cb[105]=== [response]:
+
+===20200508-014201,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014216,deal_cache[309]=== cmd = setHash
+
+===20200508-014216,cache_store_cb[105]=== [response]:
+
+===20200508-014216,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014216,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-014216,deal_cache_setLifecycle[21]=== key = online-user-edcc5e2d-ff9f-4f4e-b348-d7213dce4e34, lifecycle = 600
+
+===20200508-014216,cache_store_cb[105]=== [response]:
+
+===20200508-014216,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014604,deal_cache[309]=== cmd = setHash
+
+===20200508-014604,cache_store_cb[105]=== [response]:
+
+===20200508-014604,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014604,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-014604,deal_cache_setLifecycle[21]=== key = online-user-7bb4e4ba-4c82-4209-992a-97378fd5c013, lifecycle = 600
+
+===20200508-014604,cache_store_cb[105]=== [response]:
+
+===20200508-014604,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014920,deal_cache[309]=== cmd = setHash
+
+===20200508-014920,cache_store_cb[105]=== [response]:
+
+===20200508-014920,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014920,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-014920,deal_cache_setLifecycle[21]=== key = online-user-30947470-8a5b-48aa-bfdf-f6b6796434ae, lifecycle = 600
+
+===20200508-014920,cache_store_cb[105]=== [response]:
+
+===20200508-014920,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014937,deal_cache[309]=== cmd = setHash
+
+===20200508-014937,cache_store_cb[105]=== [response]:
+
+===20200508-014937,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-014937,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-014937,deal_cache_setLifecycle[21]=== key = online-user-c6d3ece1-c4ca-428d-80f5-c6dfdeed7592, lifecycle = 600
+
+===20200508-014937,cache_store_cb[105]=== [response]:
+
+===20200508-014937,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-031623,deal_cache[309]=== cmd = setHash
+
+===20200508-031623,cache_store_cb[105]=== [response]:
+
+===20200508-031623,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-031623,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-031623,deal_cache_setLifecycle[21]=== key = online-user-a1c82d44-526e-493d-8177-6507bb339900, lifecycle = 600
+
+===20200508-031623,cache_store_cb[105]=== [response]:
+
+===20200508-031623,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-051228,deal_cache[309]=== cmd = setHash
+
+===20200508-051228,cache_store_cb[105]=== [response]:
+
+===20200508-051228,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-051228,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-051228,deal_cache_setLifecycle[21]=== key = online-user-d9c6e803-ae01-4e80-ad22-45a9bbb840d5, lifecycle = 600
+
+===20200508-051228,cache_store_cb[105]=== [response]:
+
+===20200508-051228,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-140849,deal_cache[309]=== cmd = setHash
+
+===20200508-140849,cache_store_cb[105]=== [response]:
+
+===20200508-140849,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-140849,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-140849,deal_cache_setLifecycle[21]=== key = online-user-0d8db41c-f47c-4bc6-9c5c-ff95f3a955c2, lifecycle = 600
+
+===20200508-140849,cache_store_cb[105]=== [response]:
+
+===20200508-140849,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-200201,deal_cache[309]=== cmd = setHash
+
+===20200508-200201,cache_store_cb[105]=== [response]:
+
+===20200508-200201,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-200201,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-200201,deal_cache_setLifecycle[21]=== key = online-user-56edca83-638e-4379-88df-47d824532584, lifecycle = 600
+
+===20200508-200201,cache_store_cb[105]=== [response]:
+
+===20200508-200201,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-201040,deal_cache[309]=== cmd = setHash
+
+===20200508-201040,cache_store_cb[105]=== [response]:
+
+===20200508-201040,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-201040,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-201040,deal_cache_setLifecycle[21]=== key = online-user-f9da17f2-72f6-469b-9864-62c6e2bb3bc8, lifecycle = 600
+
+===20200508-201040,cache_store_cb[105]=== [response]:
+
+===20200508-201040,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-201148,deal_cache[309]=== cmd = setHash
+
+===20200508-201148,cache_store_cb[105]=== [response]:
+
+===20200508-201148,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-201148,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-201148,deal_cache_setLifecycle[21]=== key = online-user-dcbc2e2f-f572-4e4b-8374-a07607a66a02, lifecycle = 600
+
+===20200508-201148,cache_store_cb[105]=== [response]:
+
+===20200508-201148,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-201340,deal_cache[309]=== cmd = setHash
+
+===20200508-201340,cache_store_cb[105]=== [response]:
+
+===20200508-201340,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-201340,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-201340,deal_cache_setLifecycle[21]=== key = online-user-04332143-d97a-407f-a324-7bb306b48839, lifecycle = 600
+
+===20200508-201340,cache_store_cb[105]=== [response]:
+
+===20200508-201340,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-204825,deal_cache[309]=== cmd = setHash
+
+===20200508-204825,cache_store_cb[105]=== [response]:
+
+===20200508-204825,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-204825,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-204825,deal_cache_setLifecycle[21]=== key = online-user-95587298-dc41-4da9-9337-f6a14284ad8b, lifecycle = 600
+
+===20200508-204825,cache_store_cb[105]=== [response]:
+
+===20200508-204825,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205128,deal_cache[309]=== cmd = setHash
+
+===20200508-205128,cache_store_cb[105]=== [response]:
+
+===20200508-205128,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205128,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-205128,deal_cache_setLifecycle[21]=== key = online-user-98ed8d1f-dc5c-42e7-8f41-71664301c272, lifecycle = 600
+
+===20200508-205128,cache_store_cb[105]=== [response]:
+
+===20200508-205128,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205400,deal_cache[309]=== cmd = setHash
+
+===20200508-205400,cache_store_cb[105]=== [response]:
+
+===20200508-205400,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205400,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-205400,deal_cache_setLifecycle[21]=== key = online-user-64f82378-4089-4ccd-b919-3152a3636d28, lifecycle = 600
+
+===20200508-205400,cache_store_cb[105]=== [response]:
+
+===20200508-205400,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205637,deal_cache[309]=== cmd = setHash
+
+===20200508-205637,cache_store_cb[105]=== [response]:
+
+===20200508-205637,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205637,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-205637,deal_cache_setLifecycle[21]=== key = online-user-618304c6-a2f2-4565-ab38-76181781b934, lifecycle = 600
+
+===20200508-205637,cache_store_cb[105]=== [response]:
+
+===20200508-205637,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205825,deal_cache[309]=== cmd = setHash
+
+===20200508-205825,cache_store_cb[105]=== [response]:
+
+===20200508-205825,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-205825,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-205825,deal_cache_setLifecycle[21]=== key = online-user-58f50639-af9d-4105-9765-2d1f1e1ef3fd, lifecycle = 600
+
+===20200508-205825,cache_store_cb[105]=== [response]:
+
+===20200508-205825,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-210917,deal_cache[309]=== cmd = setHash
+
+===20200508-210917,cache_store_cb[105]=== [response]:
+
+===20200508-210917,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-210917,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-210917,deal_cache_setLifecycle[21]=== key = online-user-0b665310-9cef-421d-a627-5a00b20f6e27, lifecycle = 600
+
+===20200508-210917,cache_store_cb[105]=== [response]:
+
+===20200508-210917,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-211217,deal_cache[309]=== cmd = setHash
+
+===20200508-211217,cache_store_cb[105]=== [response]:
+
+===20200508-211217,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-211217,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-211217,deal_cache_setLifecycle[21]=== key = online-user-23ba40d2-588b-47db-a316-0ed84e283684, lifecycle = 600
+
+===20200508-211217,cache_store_cb[105]=== [response]:
+
+===20200508-211217,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-211550,deal_cache[309]=== cmd = setHash
+
+===20200508-211550,cache_store_cb[105]=== [response]:
+
+===20200508-211550,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-211550,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-211550,deal_cache_setLifecycle[21]=== key = online-user-ccaa6f46-1821-4aaf-9d29-916084034e8c, lifecycle = 600
+
+===20200508-211550,cache_store_cb[105]=== [response]:
+
+===20200508-211550,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-212054,deal_cache[309]=== cmd = setHash
+
+===20200508-212054,cache_store_cb[105]=== [response]:
+
+===20200508-212054,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-212054,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-212054,deal_cache_setLifecycle[21]=== key = online-user-454e85a1-2d6a-4d99-8151-418091c363a3, lifecycle = 600
+
+===20200508-212054,cache_store_cb[105]=== [response]:
+
+===20200508-212054,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-212219,deal_cache[309]=== cmd = setHash
+
+===20200508-212219,cache_store_cb[105]=== [response]:
+
+===20200508-212219,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-212219,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-212219,deal_cache_setLifecycle[21]=== key = online-user-d056fc60-5f7b-44dc-ae62-3b1c0e8eb917, lifecycle = 600
+
+===20200508-212219,cache_store_cb[105]=== [response]:
+
+===20200508-212219,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-212820,deal_cache[309]=== cmd = setHash
+
+===20200508-212820,cache_store_cb[105]=== [response]:
+
+===20200508-212820,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-212820,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-212820,deal_cache_setLifecycle[21]=== key = online-user-ecce38e2-34ee-45e9-88a2-368a273e5a12, lifecycle = 600
+
+===20200508-212820,cache_store_cb[105]=== [response]:
+
+===20200508-212820,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220050,deal_cache[309]=== cmd = setHash
+
+===20200508-220050,cache_store_cb[105]=== [response]:
+
+===20200508-220050,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220050,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-220050,deal_cache_setLifecycle[21]=== key = online-user-51a6c407-2cb7-4267-90b9-2c9d16b06e42, lifecycle = 600
+
+===20200508-220050,cache_store_cb[105]=== [response]:
+
+===20200508-220050,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220401,deal_cache[309]=== cmd = setHash
+
+===20200508-220401,cache_store_cb[105]=== [response]:
+
+===20200508-220401,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220401,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-220401,deal_cache_setLifecycle[21]=== key = online-user-88945103-41c6-450f-a38e-81fe5d2c227d, lifecycle = 600
+
+===20200508-220401,cache_store_cb[105]=== [response]:
+
+===20200508-220401,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220717,deal_cache[309]=== cmd = setHash
+
+===20200508-220717,cache_store_cb[105]=== [response]:
+
+===20200508-220717,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220717,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-220717,deal_cache_setLifecycle[21]=== key = online-user-c6f2a827-3c7e-49ae-8316-7542ebf5f392, lifecycle = 600
+
+===20200508-220717,cache_store_cb[105]=== [response]:
+
+===20200508-220717,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220912,deal_cache[309]=== cmd = setHash
+
+===20200508-220912,cache_store_cb[105]=== [response]:
+
+===20200508-220912,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+
+===20200508-220912,deal_cache[309]=== cmd = setLifecycle
+
+===20200508-220912,deal_cache_setLifecycle[21]=== key = online-user-aece4f7f-4a40-4935-b7bb-31c85f82530e, lifecycle = 600
+
+===20200508-220912,cache_store_cb[105]=== [response]:
+
+===20200508-220912,cache_store_cb[106]=== {
+	"result":	"ok"
+}
+

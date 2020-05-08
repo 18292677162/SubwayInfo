@@ -1,0 +1,244 @@
+===20200507-033626,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-033626,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-033626,persistent_store_cb[114]=== [response]:
+
+===20200507-033626,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-033750,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-033750,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-033750,persistent_store_cb[114]=== [response]:
+
+===20200507-033750,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-034651,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-034651,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-034651,persistent_store_cb[114]=== [response]:
+
+===20200507-034651,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-035102,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-035102,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-035102,persistent_store_cb[114]=== [response]:
+
+===20200507-035102,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-040359,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-040359,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-040359,persistent_store_cb[114]=== [response]:
+
+===20200507-040359,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-050810,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-050810,deal_persistent[159]=== insert into SUBWAY_TABLE_USER
+
+===20200507-050810,insert_table_user[110]=== ====== conn mysql error!=====
+
+===20200507-050810,persistent_store_cb[114]=== [response]:
+
+===20200507-050810,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"store SUBWAY_TABLE_USER error"
+}
+
+===20200507-051744,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-051744,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-051744,persistent_store_cb[114]=== [response]:
+
+===20200507-051744,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-051810,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-051810,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-051810,persistent_store_cb[114]=== [response]:
+
+===20200507-051810,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-052356,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-052356,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-052356,persistent_store_cb[114]=== [response]:
+
+===20200507-052356,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-052755,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-052755,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-052755,persistent_store_cb[114]=== [response]:
+
+===20200507-052755,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-053049,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-053049,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-053049,persistent_store_cb[114]=== [response]:
+
+===20200507-053049,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-054142,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-054142,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-054142,persistent_store_cb[114]=== [response]:
+
+===20200507-054142,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-055031,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-055031,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-055031,persistent_store_cb[114]=== [response]:
+
+===20200507-055031,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-055239,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-055239,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-055239,persistent_store_cb[114]=== [response]:
+
+===20200507-055239,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-055521,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-055521,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-055521,persistent_store_cb[114]=== [response]:
+
+===20200507-055521,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-055601,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-055601,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-055601,persistent_store_cb[114]=== [response]:
+
+===20200507-055601,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-055836,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-055836,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-055836,persistent_store_cb[114]=== [response]:
+
+===20200507-055836,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-060330,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-060330,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-060330,persistent_store_cb[114]=== [response]:
+
+===20200507-060330,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-062100,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-062100,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-062100,persistent_store_cb[114]=== [response]:
+
+===20200507-062100,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-153438,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-153438,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-153438,persistent_store_cb[114]=== [response]:
+
+===20200507-153438,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-193505,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-193505,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-193505,persistent_store_cb[114]=== [response]:
+
+===20200507-193505,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200507-235917,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200507-235917,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200507-235917,persistent_store_cb[114]=== [response]:
+
+===20200507-235917,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+

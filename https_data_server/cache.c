@@ -28,7 +28,11 @@
 #include <cJSON.h>
 #include "util.h"
 
-void cache_cb(struct evhttp_request *req, void *arg)
+#include "make_log.h"
+#include "remote_store.h"
+#include "make_log.h"
+
+void cache_store_cb(struct evhttp_request *req, void *arg)
 { 
     struct evbuffer *evb = NULL;
     const char *uri = evhttp_request_get_uri (req);
@@ -77,31 +81,9 @@ void cache_cb(struct evhttp_request *req, void *arg)
        具体的：可以根据Post的参数执行相应操作，然后将结果输出
        ...
     */
-    //unpack json
-    cJSON* root = cJSON_Parse(request_data_buf);
-    cJSON* username = cJSON_GetObjectItem(root, "username");
-    cJSON* password = cJSON_GetObjectItem(root, "password");
-    cJSON* driver = cJSON_GetObjectItem(root, "regist");
-
-    printf("username = %s\n", username->valuestring);
-    printf("password = %s\n", password->valuestring);
-    printf("regist = %s\n", driver->valuestring);
-
-    cJSON_Delete(root);
-
-    // 查询数据库
-
-    //packet json
-    root = cJSON_CreateObject();
-
-    cJSON_AddStringToObject(root, "result", "ok");
-    //cJSON_AddStringToObject(root, "sessionid", "xxxxxxxx");
-
-    char *response_data = cJSON_Print(root);
-    cJSON_Delete(root);
-
-
-
+    char *response_data = NULL;
+    response_data = deal_cache(request_data_buf);
+    
     /* This holds the content we're sending. */
 
     //HTTP header
@@ -119,9 +101,10 @@ void cache_cb(struct evhttp_request *req, void *arg)
     if (evb)
         evbuffer_free (evb);
 
+    if (response_data != NULL) {
+        LOG(LOG_MODULE_SERVER_DATA, LOG_PROC_CACHE, "[response]:\n");
+        LOG(LOG_MODULE_SERVER_DATA, LOG_PROC_CACHE, "%s\n", response_data);
 
-    printf("[response]:\n");
-    printf("%s\n", response_data);
-
-    free(response_data);
+        free(response_data);
+    }
 }

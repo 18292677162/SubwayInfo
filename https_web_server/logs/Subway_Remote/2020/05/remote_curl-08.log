@@ -1,0 +1,278 @@
+===20200508-000018,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-004107,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-004851,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-010811,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-010935,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-011226,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-011308,curl_to_dataserver_reg[332]=== reg store error, reason = store SUBWAY_TABLE_USER error
+
+===20200508-011545,curl_to_dataserver_reg[326]=== store reg succ
+
+===20200508-011545,curl_to_cacheserver_session[156]=== sessionid = online-user-02f44d21-a9e0-4d86-b60d-c3369fe71fbb, username  = 18292677162
+
+===20200508-011545,curl_to_cacheserver_session[199]=== set session error, reason = set hash ERROR
+
+===20200508-012901,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-012901,curl_to_cacheserver_session[156]=== sessionid = online-user-bfdd0d3c-6ec2-45ef-a2b4-881125c34d4a, username  = 18292677162
+
+===20200508-012901,curl_to_cacheserver_session[199]=== set session error, reason = set hash ERROR
+
+===20200508-013058,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-013058,curl_to_cacheserver_session[156]=== sessionid = online-user-57c91bea-a652-4d56-9e57-a7b074d93846, username  = 18292677162
+
+===20200508-013058,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-013058,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-013851,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-014129,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-014130,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-014132,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-014133,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-014201,curl_to_dataserver_reg[326]=== store reg succ
+
+===20200508-014201,curl_to_cacheserver_session[156]=== sessionid = online-user-3f45b34c-5893-41b9-9e54-3c8c81b1185c, username  = 18292677162
+
+===20200508-014201,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-014201,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-014213,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-014216,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-014216,curl_to_cacheserver_session[156]=== sessionid = online-user-edcc5e2d-ff9f-4f4e-b348-d7213dce4e34, username  = 18292677162
+
+===20200508-014216,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-014216,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-014604,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-014604,curl_to_cacheserver_session[156]=== sessionid = online-user-7bb4e4ba-4c82-4209-992a-97378fd5c013, username  = 18292677162
+
+===20200508-014604,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-014604,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-014904,curl_to_dataserver_reg[332]=== reg store error, reason = store SUBWAY_TABLE_USER error
+
+===20200508-014920,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-014920,curl_to_cacheserver_session[156]=== sessionid = online-user-30947470-8a5b-48aa-bfdf-f6b6796434ae, username  = 18292677162
+
+===20200508-014920,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-014920,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-014937,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-014937,curl_to_cacheserver_session[156]=== sessionid = online-user-c6d3ece1-c4ca-428d-80f5-c6dfdeed7592, username  = 18292677162
+
+===20200508-014937,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-014937,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-031623,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-031623,curl_to_cacheserver_session[156]=== sessionid = online-user-a1c82d44-526e-493d-8177-6507bb339900, username  = 18292677162
+
+===20200508-031623,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-031623,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-051228,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-051228,curl_to_cacheserver_session[156]=== sessionid = online-user-d9c6e803-ae01-4e80-ad22-45a9bbb840d5, username  = 18292677162
+
+===20200508-051228,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-051228,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-140844,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-140849,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-140849,curl_to_cacheserver_session[156]=== sessionid = online-user-0d8db41c-f47c-4bc6-9c5c-ff95f3a955c2, username  = 18292677162
+
+===20200508-140849,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-140849,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-200201,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-200201,curl_to_cacheserver_session[156]=== sessionid = online-user-56edca83-638e-4379-88df-47d824532584, username  = 18292677162
+
+===20200508-200201,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-200201,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-201035,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-201040,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-201040,curl_to_cacheserver_session[156]=== sessionid = online-user-f9da17f2-72f6-469b-9864-62c6e2bb3bc8, username  = 18292677162
+
+===20200508-201040,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-201040,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-201148,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-201148,curl_to_cacheserver_session[156]=== sessionid = online-user-dcbc2e2f-f572-4e4b-8374-a07607a66a02, username  = 18292677162
+
+===20200508-201148,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-201148,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-201333,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-201340,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-201340,curl_to_cacheserver_session[156]=== sessionid = online-user-04332143-d97a-407f-a324-7bb306b48839, username  = 18292677162
+
+===20200508-201340,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-201340,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-204825,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-204825,curl_to_cacheserver_session[156]=== sessionid = online-user-95587298-dc41-4da9-9337-f6a14284ad8b, username  = 18292677162
+
+===20200508-204825,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-204825,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-205128,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-205128,curl_to_cacheserver_session[156]=== sessionid = online-user-98ed8d1f-dc5c-42e7-8f41-71664301c272, username  = 18292677162
+
+===20200508-205128,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-205128,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-205400,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-205400,curl_to_cacheserver_session[156]=== sessionid = online-user-64f82378-4089-4ccd-b919-3152a3636d28, username  = 18292677162
+
+===20200508-205400,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-205400,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-205637,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-205637,curl_to_cacheserver_session[156]=== sessionid = online-user-618304c6-a2f2-4565-ab38-76181781b934, username  = 18292677162
+
+===20200508-205637,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-205637,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-205818,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-205825,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-205825,curl_to_cacheserver_session[156]=== sessionid = online-user-58f50639-af9d-4105-9765-2d1f1e1ef3fd, username  = 18292677162
+
+===20200508-205825,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-205825,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-210917,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-210917,curl_to_cacheserver_session[156]=== sessionid = online-user-0b665310-9cef-421d-a627-5a00b20f6e27, username  = 18292677162
+
+===20200508-210917,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-210917,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-211217,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-211217,curl_to_cacheserver_session[156]=== sessionid = online-user-23ba40d2-588b-47db-a316-0ed84e283684, username  = 18292677162
+
+===20200508-211217,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-211217,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-211550,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-211550,curl_to_cacheserver_session[156]=== sessionid = online-user-ccaa6f46-1821-4aaf-9d29-916084034e8c, username  = 18292677162
+
+===20200508-211550,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-211550,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-212054,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-212054,curl_to_cacheserver_session[156]=== sessionid = online-user-454e85a1-2d6a-4d99-8151-418091c363a3, username  = 18292677162
+
+===20200508-212054,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-212054,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-212219,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-212219,curl_to_cacheserver_session[156]=== sessionid = online-user-d056fc60-5f7b-44dc-ae62-3b1c0e8eb917, username  = 18292677162
+
+===20200508-212219,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-212219,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-212813,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-212820,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-212820,curl_to_cacheserver_session[156]=== sessionid = online-user-ecce38e2-34ee-45e9-88a2-368a273e5a12, username  = 18292677162
+
+===20200508-212820,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-212820,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-220044,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-220050,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-220050,curl_to_cacheserver_session[156]=== sessionid = online-user-51a6c407-2cb7-4267-90b9-2c9d16b06e42, username  = 18292677162
+
+===20200508-220050,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-220050,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-220401,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-220401,curl_to_cacheserver_session[156]=== sessionid = online-user-88945103-41c6-450f-a38e-81fe5d2c227d, username  = 18292677162
+
+===20200508-220401,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-220401,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-220711,curl_to_dataserver_login[120]=== query login, reason = query SUBWAY_TABLE_USER error
+
+===20200508-220717,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-220717,curl_to_cacheserver_session[156]=== sessionid = online-user-c6f2a827-3c7e-49ae-8316-7542ebf5f392, username  = 18292677162
+
+===20200508-220717,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-220717,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+
+===20200508-220912,curl_to_dataserver_login[113]=== query login succ
+
+===20200508-220912,curl_to_cacheserver_session[156]=== sessionid = online-user-aece4f7f-4a40-4935-b7bb-31c85f82530e, username  = 18292677162
+
+===20200508-220912,curl_to_cacheserver_session[193]=== set session  succ
+
+===20200508-220912,curl_to_cacheserver_lifecycle[257]=== set lifecycle  succ
+

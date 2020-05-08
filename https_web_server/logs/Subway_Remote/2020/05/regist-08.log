@@ -1,0 +1,32 @@
+===20200508-011308,regist_cb[149]=== [response]:
+
+===20200508-011308,regist_cb[150]=== {
+	"result":	"error",
+	"reason":	"reg error",
+	"recode":	"0"
+}
+
+===20200508-011545,regist_cb[149]=== [response]:
+
+===20200508-011545,regist_cb[150]=== {
+	"result":	"error",
+	"reason":	"reg error",
+	"recode":	"0"
+}
+
+===20200508-014201,regist_cb[149]=== [response]:
+
+===20200508-014201,regist_cb[150]=== {
+	"result":	"ok",
+	"sessionid":	"online-user-3f45b34c-5893-41b9-9e54-3c8c81b1185c",
+	"recode":	"0"
+}
+
+===20200508-014904,regist_cb[149]=== [response]:
+
+===20200508-014904,regist_cb[150]=== {
+	"result":	"error",
+	"reason":	"reg error",
+	"recode":	"0"
+}
+

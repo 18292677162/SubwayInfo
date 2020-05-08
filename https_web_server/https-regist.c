@@ -28,8 +28,11 @@
 #include <cJSON.h>
 #include "util.h"
 
+#include "remote_store.h"
+
 void regist_cb (struct evhttp_request *req, void *arg)
 { 
+    int ret = 0;
     struct evbuffer *evb = NULL;
     const char *uri = evhttp_request_get_uri (req);
     struct evhttp_uri *decoded = NULL;
@@ -78,7 +81,7 @@ void regist_cb (struct evhttp_request *req, void *arg)
        ...
     */
 
-    int is_regist_success = 0; //0-succ 1-fail
+    // int is_regist_success = 0; //0-succ 1-fail
     //unpack json
     cJSON* root = cJSON_Parse(request_data_buf);
     cJSON* username = cJSON_GetObjectItem(root, "username");
@@ -93,112 +96,36 @@ void regist_cb (struct evhttp_request *req, void *arg)
     https://ip:port/regist [json_data]  
     {
         cmd: "insert",
-        busi: "regist",
+        remote_store: "regist",
         table: "Subway_TABLE_USER",
 
         username: "hsy",
         password: "123456"
     }
     */
-    // 发送给 data server
-    cJSON *request_data_root = cJSON_CreateObject();
-    cJSON_AddStringToObject(request_data_root, "cmd", "insert");
-    cJSON_AddStringToObject(request_data_root, "busi", "regist");
-    cJSON_AddStringToObject(request_data_root, "table", "Subway_TABLE_USER");
-    cJSON_AddStringToObject(request_data_root, "username", username->valuestring);
-    cJSON_AddStringToObject(request_data_root, "password", password->valuestring);
+    // 发送libcurl请求 进行远程入库
+    ret = curl_to_dataserver_reg(username->valuestring,
+                                 password->valuestring);
+    char sessionid[SESSIONID_STR_LEN] = {0};
+    char *recode = RECODE_OK;
+    if (ret == 0) {
+        //生成sessionid
+        create_sessionid(sessionid);
+
+        //将sessionid入库远程缓存数据库
+        ret = curl_to_cacheserver_session(username->valuestring, sessionid, ORDER_ID_NONE);
+    }
+
+    if (ret == 0) {
+        //设置key的超时时间
+        ret = curl_to_cacheserver_lifecycle(sessionid, SESSIONID_LIFECYCLE);
+    }
+
+
+    //将sessionid存放到缓存数据库中
+    char *response_data = make_reg_login_res_json(ret, recode, sessionid, "reg error");
     
-    char *regist_post_data = cJSON_Print(request_data_root);
-
-    CURL *curl = NULL;
-    CURLcode res;
-    response_data_t response_server_data;
-
-
-    curl = curl_easy_init();
-    if(curl == NULL){
-        printf("curl init error\n");
-        // 返回错误给前端
-    }
-
-    curl_easy_setopt(curl, CURLOPT_URL, "https://120.26.173.34:8887/persistent");        
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0);
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
-
-    curl_easy_setopt(curl, CURLOPT_POST, 1);
-    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, regist_post_data);
-
-    // 回调
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, deal_response);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response_server_data);
-
-    res = curl_easy_perform(curl);
-    if(res != CURLE_OK){
-        printf("curl to data server perform error res = %d\n", res);
-        // 释放变量
-        // 返回 json 前端
-    }
-
-
-    /*
-    ====得到服务器响应数据 ====
-     注册成功就默认为登陆状态
-
-    //成功
-    {
-        result: "ok",
-        recode: "0",
-
-        sessionid: "online-driver-xxxx-xxx-xxx-xxxx",
-        orderid:"NONE",
-        status:"idle"
-    }
-    //失败
-    {
-        result: "error",
-        reason: "why...."
-    }
-    */
-    cJSON *response_from_data = cJSON_Parse(response_server_data.data);
-    cJSON *result = cJSON_GetObjectItem(response_from_data, "result");
-    if(result && strcmp(result->valuestring, "ok") == 0){
-        // 入库成功
-        printf("insert Subway_TABLE_USER Success!\n");
-        is_regist_success = 0;
-    }else{
-        printf("insert Subway_TABLE_USER Fail!\n");
-        is_regist_success = -1;
-    }
-
-    //生成一个sessionid
-    char sessionid[SESSIONID_LEN] = {0};
-
-    create_sessionid(sessionid);
-    printf("sessionid = %s\n", sessionid);
-    // 向存储服务器发送 serHash 指令 /cache 指令
-
-    // 得到结果
-
-
     cJSON_Delete(root);
-
-    //packet json
-    root = cJSON_CreateObject();
-
-    if(is_regist_success == 0)
-        cJSON_AddStringToObject(root, "result", "ok");
-    else if(is_regist_success == -1){
-        cJSON_AddStringToObject(root, "result", "error");
-        cJSON_AddStringToObject(root, "reason", "insert Subway_TABLE_USER Error\n");
-    }
-
-    //cJSON_AddStringToObject(root, "sessionid", "xxxxxxxx");
-
-    char *response_data = cJSON_Print(root);
-    cJSON_Delete(root);
-
-    cJSON_Delete(request_data_root);
-
     /* This holds the content we're sending. */
 
     //HTTP header
@@ -219,6 +146,8 @@ void regist_cb (struct evhttp_request *req, void *arg)
 
     printf("[response]:\n");
     printf("%s\n", response_data);
+    LOG(LOG_MODULE, LOG_PROC_REG, "[response]:\n");
+    LOG(LOG_MODULE, LOG_PROC_REG, "%s\n", response_data);
 
     free(response_data);
 }

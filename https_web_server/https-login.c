@@ -1,4 +1,5 @@
 #include "util.h"
+#include "remote_store.h"
 
 /* This callback gets invoked when we get any http request that doesn't match
  * any other callback.  Like any evhttp server callback, it has a simple job:
@@ -6,6 +7,7 @@
  */
 void login_cb(struct evhttp_request *req, void *arg)
 { 
+    int ret = 0;
     struct evbuffer *evb = NULL;
     const char *uri = evhttp_request_get_uri (req);
     struct evhttp_uri *decoded = NULL;
@@ -57,16 +59,38 @@ void login_cb(struct evhttp_request *req, void *arg)
     cJSON* root = cJSON_Parse(request_data_buf);
     cJSON* username = cJSON_GetObjectItem(root, "username");
     cJSON* password = cJSON_GetObjectItem(root, "password");
-    cJSON* driver = cJSON_GetObjectItem(root, "regist");
+    cJSON* regist = cJSON_GetObjectItem(root, "regist");
 
     printf("username = %s\n", username->valuestring);
     printf("password = %s\n", password->valuestring);
-    printf("regist = %s\n", driver->valuestring);
+    printf("regist = %s\n", regist->valuestring);
+
+
+    // 查询数据库
+    ret = curl_to_dataserver_login(username->valuestring, password->valuestring);
+
+    char *recode = RECODE_OK;
+
+    char sessionid[SESSIONID_STR_LEN] = {0};
+    if (ret == 0) {
+        //生成sessionid
+        create_sessionid(sessionid);
+        ret = curl_to_cacheserver_session(username->valuestring, sessionid, ORDER_ID_NONE);
+    }
+
+    if (ret == 0) {
+        //设置key的超时时间
+        ret = curl_to_cacheserver_lifecycle(sessionid, SESSIONID_LIFECYCLE);
+    }
+
+
+    //将sessionid存放到缓存数据库中
+    char *response_data = make_reg_login_res_json(ret, recode, sessionid, "login error");
+
 
     cJSON_Delete(root);
 
-    // 查询数据库
-
+/*
     //packet json
     root = cJSON_CreateObject();
 
@@ -75,7 +99,7 @@ void login_cb(struct evhttp_request *req, void *arg)
 
     char *response_data = cJSON_Print(root);
     cJSON_Delete(root);
-
+*/
 
 
     /* This holds the content we're sending. */
