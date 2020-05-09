@@ -50,12 +50,12 @@
                 android:orderInCategory="100"
                 app:showAsAction="never" />
             <item
-                android:title="北大街"
+                android:title="北大街    ①②"
                 android:id="@+id/line1_bdj"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
             <item
-                android:title="五路口"
+                android:title="五路口    ①④"
                 android:id="@+id/line1_wlk"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
@@ -64,27 +64,404 @@
                 android:id="@+id/line1_cym"
                 android:orderInCategory="100"
                 app:showAsAction="never" />
+            <item
+                android:title="康复路"
+                android:id="@+id/line1_kfl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="通化门    ①③"
+                android:id="@+id/line1_thm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="万寿路"
+                android:id="@+id/line1_wsl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="长乐坡"
+                android:id="@+id/line1_clp"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="浐河"
+                android:id="@+id/line1_ch"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="半坡"
+                android:id="@+id/line1_bp"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="纺织城"
+                android:id="@+id/line1_fzz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
         </menu>
     </item>
     <item android:title="二号线">
         <menu >
-            <item android:title="香蕉"/>
-            <item android:title="苹果"/>
-            <item android:title="橘子"/>
+            <item
+                android:title="北客站"
+                android:id="@+id/line2_bkz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="北苑"
+                android:id="@+id/line2_by"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="运动公园"
+                android:id="@+id/line2_ydgy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="行政中心    ②④"
+                android:id="@+id/line2_xzzx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="凤城五路"
+                android:id="@+id/line2_fcwl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="市图书馆"
+                android:id="@+id/line2_stsg"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大明宫西"
+                android:id="@+id/line2_dmgx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="龙首原"
+                android:id="@+id/line2_lsy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="安远门"
+                android:id="@+id/line2_aym"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="北大街    ①②"
+                android:id="@+id/line2_bdj"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="钟楼"
+                android:id="@+id/line2_zl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="永宁门"
+                android:id="@+id/line2_ynm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="南稍门"
+                android:id="@+id/line2_nsm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="体育场"
+                android:id="@+id/line2_tyc"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="小寨    ②③"
+                android:id="@+id/line2_xz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="纬一街"
+                android:id="@+id/line2_wyj"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="会展中心"
+                android:id="@+id/line2_hzzx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="三爻"
+                android:id="@+id/line2_sy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="凤栖原"
+                android:id="@+id/line2_fxy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="航天城"
+                android:id="@+id/line2_htc"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="韦曲南"
+                android:id="@+id/line2_wqn"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
         </menu>
     </item>
     <item android:title="三号线">
         <menu >
-            <item android:title="香蕉"/>
-            <item android:title="苹果"/>
-            <item android:title="橘子"/>
+            <item
+                android:title="鱼化寨"
+                android:id="@+id/line3_yhz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="丈八北路"
+                android:id="@+id/line3_zbbl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="延平门"
+                android:id="@+id/line3_ypm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="科技路"
+                android:id="@+id/line3_kjl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="太白南路"
+                android:id="@+id/line3_tbnl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="吉祥村"
+                android:id="@+id/line3_jxc"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="小寨  ②③"
+                android:id="@+id/line3_xz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大雁塔  ③④"
+                android:id="@+id/line3_dyt"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="北池头"
+                android:id="@+id/line3_bct"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="青龙寺"
+                android:id="@+id/line3_qls"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="延兴门"
+                android:id="@+id/line3_yxm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="咸宁路"
+                android:id="@+id/line3_xnl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="长乐公园"
+                android:id="@+id/line3_clgy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="通化门 ①③"
+                android:id="@+id/line3_thm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="胡家庙"
+                android:id="@+id/line3_hjm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="石家街"
+                android:id="@+id/line3_sjj"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="辛家庙"
+                android:id="@+id/line3_xjm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="广泰门"
+                android:id="@+id/line3_gtm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="桃花潭"
+                android:id="@+id/line3_tht"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="浐灞中心"
+                android:id="@+id/line3_cbzx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="香湖湾"
+                android:id="@+id/line3_xhw"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
         </menu>
     </item>
     <item android:title="四号线">
         <menu >
-            <item android:title="香蕉"/>
-            <item android:title="苹果"/>
-            <item android:title="橘子"/>
+            <item
+                android:title="航天新城"
+                android:id="@+id/line4_htxc"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="航天东路"
+                android:id="@+id/line4_htdl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="神舟大道"
+                android:id="@+id/line4_szdd"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="东长安街"
+                android:id="@+id/line4_dcaj"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="飞天路"
+                android:id="@+id/line4_ftl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="航天大道"
+                android:id="@+id/line4_htdd"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="金滹沱"
+                android:id="@+id/line4_jht"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="曲江池西"
+                android:id="@+id/line4_qjcx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大唐芙蓉园"
+                android:id="@+id/line4_dtfry"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大雁塔  ③④"
+                android:id="@+id/line4_dyt"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="西安科技大学"
+                android:id="@+id/line4_xakjdx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="建筑科技大学"
+                android:id="@+id/line4_jzkjdx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="和平门"
+                android:id="@+id/line4_hpm"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大差市"
+                android:id="@+id/line4_dcs"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="五路口  ①④"
+                android:id="@+id/line4_wlk"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="含元殿"
+                android:id="@+id/line4_hyd"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大明宫"
+                android:id="@+id/line4_dmg"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="大明宫北"
+                android:id="@+id/line4_dmgb"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="余家寨"
+                android:id="@+id/line4_yjz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="百花村"
+                android:id="@+id/line4_bhc"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="常青路"
+                android:id="@+id/line4_cql"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="市中医医院"
+                android:id="@+id/line4_szyyy"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="行政中心  ②④"
+                android:id="@+id/line4_xzzx"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="文景路"
+                android:id="@+id/line4_wjl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="凤城九路"
+                android:id="@+id/line4_fcjl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="凤城十二路"
+                android:id="@+id/line4_fcsel"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="元朔路"
+                android:id="@+id/line4_ysl"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+            <item
+                android:title="北客站(北广场)  ④"
+                android:id="@+id/line4_bkz"
+                android:orderInCategory="100"
+                app:showAsAction="never" />
+
         </menu>
     </item>
         <!--

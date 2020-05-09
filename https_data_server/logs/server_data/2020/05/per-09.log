@@ -1,0 +1,287 @@
+===20200509-182627,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-182627,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-182627,process_result[19]=== 1 rows returned 
+
+===20200509-182627,process_result[28]=== 0 row is yuan99124
+===20200509-182627,persistent_store_cb[114]=== [response]:
+
+===20200509-182627,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-183632,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-183632,deal_persistent[159]=== insert into SUBWAY_TABLE_USER
+
+===20200509-183632,persistent_store_cb[114]=== [response]:
+
+===20200509-183632,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-183651,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-183651,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-183651,process_result[19]=== 1 rows returned 
+
+===20200509-183651,process_result[28]=== 0 row is yuan99124
+===20200509-183651,persistent_store_cb[114]=== [response]:
+
+===20200509-183651,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-184310,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-184310,deal_persistent[159]=== insert into SUBWAY_TABLE_USER
+
+===20200509-184310,persistent_store_cb[114]=== [response]:
+
+===20200509-184310,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-184331,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-184331,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-184331,process_result[19]=== 1 rows returned 
+
+===20200509-184331,process_result[28]=== 0 row is hxh22879
+===20200509-184331,persistent_store_cb[114]=== [response]:
+
+===20200509-184331,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-185022,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-185022,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-185022,process_result[19]=== 1 rows returned 
+
+===20200509-185022,process_result[28]=== 0 row is yuan99124
+===20200509-185022,persistent_store_cb[114]=== [response]:
+
+===20200509-185022,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200509-185049,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-185049,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-185049,process_result[19]=== 1 rows returned 
+
+===20200509-185049,process_result[28]=== 0 row is yuan99124
+===20200509-185049,persistent_store_cb[114]=== [response]:
+
+===20200509-185049,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-190220,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-190220,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-190220,process_result[19]=== 1 rows returned 
+
+===20200509-190220,process_result[28]=== 0 row is yuan99124
+===20200509-190220,persistent_store_cb[114]=== [response]:
+
+===20200509-190220,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-190425,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-190425,deal_persistent[159]=== insert into SUBWAY_TABLE_USER
+
+===20200509-190425,persistent_store_cb[114]=== [response]:
+
+===20200509-190425,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-190438,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-190438,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-190438,process_result[19]=== 1 rows returned 
+
+===20200509-190438,process_result[28]=== 0 row is whz15520722873
+===20200509-190438,persistent_store_cb[114]=== [response]:
+
+===20200509-190438,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-190616,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-190616,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-190616,process_result[19]=== 1 rows returned 
+
+===20200509-190616,process_result[28]=== 0 row is yuan99124
+===20200509-190616,persistent_store_cb[114]=== [response]:
+
+===20200509-190616,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-191135,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-191135,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-191135,process_result[19]=== 1 rows returned 
+
+===20200509-191135,process_result[28]=== 0 row is whz15520722873
+===20200509-191135,persistent_store_cb[114]=== [response]:
+
+===20200509-191135,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-200657,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-200657,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-200657,process_result[19]=== 1 rows returned 
+
+===20200509-200657,process_result[28]=== 0 row is yuan99124
+===20200509-200657,persistent_store_cb[114]=== [response]:
+
+===20200509-200657,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-203336,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-203336,deal_persistent[159]=== insert into SUBWAY_TABLE_USER
+
+===20200509-203336,persistent_store_cb[114]=== [response]:
+
+===20200509-203336,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-203349,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-203349,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-203349,process_result[19]=== 1 rows returned 
+
+===20200509-203349,process_result[28]=== 0 row is lxy19990715
+===20200509-203349,persistent_store_cb[114]=== [response]:
+
+===20200509-203349,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-205428,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-205428,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-205428,process_result[19]=== 1 rows returned 
+
+===20200509-205428,process_result[28]=== 0 row is yuan99124
+===20200509-205428,persistent_store_cb[114]=== [response]:
+
+===20200509-205428,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-212421,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-212421,deal_persistent[159]=== insert into SUBWAY_TABLE_USER
+
+===20200509-212421,persistent_store_cb[114]=== [response]:
+
+===20200509-212421,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-212841,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-212841,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-212841,process_result[19]=== 1 rows returned 
+
+===20200509-212841,process_result[28]=== 0 row is yuan99124
+===20200509-212841,persistent_store_cb[114]=== [response]:
+
+===20200509-212841,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-212956,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-212956,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-212956,process_result[19]=== 1 rows returned 
+
+===20200509-212956,process_result[28]=== 0 row is yuan99124
+===20200509-212956,persistent_store_cb[114]=== [response]:
+
+===20200509-212956,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200509-213155,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-213155,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-213155,process_result[19]=== 1 rows returned 
+
+===20200509-213155,process_result[28]=== 0 row is yuan99124
+===20200509-213155,persistent_store_cb[114]=== [response]:
+
+===20200509-213155,persistent_store_cb[115]=== {
+	"result":	"error",
+	"reason":	"query SUBWAY_TABLE_USER error"
+}
+
+===20200509-213201,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-213201,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-213201,process_result[19]=== 1 rows returned 
+
+===20200509-213201,process_result[28]=== 0 row is yuan99124
+===20200509-213201,persistent_store_cb[114]=== [response]:
+
+===20200509-213201,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-214936,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-214936,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-214936,process_result[19]=== 1 rows returned 
+
+===20200509-214936,process_result[28]=== 0 row is yuan99124
+===20200509-214936,persistent_store_cb[114]=== [response]:
+
+===20200509-214936,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+
+===20200509-220048,persistent_store_cb[53]=== Got a POST request for </persistent>
+
+===20200509-220048,deal_persistent[178]=== query from SUBWAY_TABLE_USER
+
+===20200509-220048,process_result[19]=== 1 rows returned 
+
+===20200509-220048,process_result[28]=== 0 row is yuan99124
+===20200509-220048,persistent_store_cb[114]=== [response]:
+
+===20200509-220048,persistent_store_cb[115]=== {
+	"result":	"ok"
+}
+

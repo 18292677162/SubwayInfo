@@ -83,7 +83,7 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_login
 
     //2.向服务器 POST 请求 http
     // curl url
-    curl_easy_setopt(curl, CURLOPT_URL, "http://120.26.173.34:8888/login");
+    curl_easy_setopt(curl, CURLOPT_URL, "https://120.26.173.34:8888/login");
 
     // 客户端忽略CA证书认证
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, false);
@@ -138,7 +138,7 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_login
             return JNI_FALSE;
         }
     }
-    return JNI_TRUE;
+    return JNI_FALSE;
 }
 #ifdef __cplusplus
 }

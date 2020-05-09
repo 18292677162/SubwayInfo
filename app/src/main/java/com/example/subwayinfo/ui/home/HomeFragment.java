@@ -8,11 +8,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 
 import com.amap.api.location.AMapLocation;
@@ -24,6 +28,7 @@ import com.amap.api.maps.CameraUpdateFactory;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.UiSettings;
 import com.amap.api.maps.model.BitmapDescriptorFactory;
+import com.amap.api.maps.model.CameraPosition;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
@@ -51,7 +56,6 @@ import java.util.function.IntToDoubleFunction;
 
 public class HomeFragment extends Fragment {
 
-    private UiSettings _uiSettings = null;
 
     private MapView _mapView = null;
 
@@ -108,7 +112,7 @@ public class HomeFragment extends Fragment {
         // 比例尺
         _amap.getUiSettings().setScaleControlsEnabled(true);
         //_amap.setLocationSource(this);//通过aMap对象设置定位数据源的监听
-        _amap.getUiSettings().setMyLocationButtonEnabled(false); //显示默认的定位按钮
+        _amap.getUiSettings().setMyLocationButtonEnabled(true); //显示默认的定位按钮
 
     }
 
@@ -137,7 +141,7 @@ public class HomeFragment extends Fragment {
         _amapLocationOption = new AMapLocationClientOption();
 
         // 10秒定位一次
-        _amapLocationOption.setInterval(3000);
+        _amapLocationOption.setInterval(2000);
 
         // 将 option 设置给 client 对象
         _amapLocationClient.setLocationOption(_amapLocationOption);
@@ -151,6 +155,7 @@ public class HomeFragment extends Fragment {
                     // 有相应
                     if(aMapLocation.getErrorCode() == 0){
                         // 定位成功
+                        Log.e("Amap", "home!!!");
                         Log.e("Amap", "location success address = "+ aMapLocation.getAddress());
                         Log.e("Amap", "city = "+ aMapLocation.getCity());
                         Log.e("Amap", "longtitude = "+ aMapLocation.getLongitude());
@@ -232,6 +237,11 @@ public class HomeFragment extends Fragment {
 
                 // 添加地图
                 busRouteOverlay.addToMap();
+
+                //连续定位、且将视角移动到地图中心点，定位点依照设备方向旋转，并且会跟随设备移动。（1秒1次定位）默认执行此种模式
+                myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATION_ROTATE);
+                _amap.setMyLocationStyle(myLocationStyle);
+                _amap.setMyLocationEnabled(true);
             }
 
             @Override
@@ -260,9 +270,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
                 _amap.clear();
-
 
                 // 搜索POI兴趣点
                 Log.e("Amap", "button onclick");
@@ -389,6 +397,7 @@ public class HomeFragment extends Fragment {
     }
 
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, null);
@@ -410,7 +419,6 @@ public class HomeFragment extends Fragment {
         _amap.setMyLocationStyle(myLocationStyle);
         _amap.setMyLocationEnabled(true);
 
-
         doLocation();
 
         doSearchPOI();
@@ -418,7 +426,6 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
-
 
 
     @Override

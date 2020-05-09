@@ -5,26 +5,31 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".ui.login.LoginActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/login_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <EditText
         android:id="@+id/tv_regist_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="24dp"
-        android:hint="请输入手机号"
+        android:drawableLeft="@drawable/user_icon"
+        android:hint=" 请输入手机号"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,13 +39,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
-
+        android:drawableLeft="@drawable/passwd_icon"
         android:layout_marginEnd="24dp"
-        android:hint="请输入密码（8-16位数字和字母）"
+        android:hint=" 请输入密码（8-16位数字和字母）"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_regist_username" />
@@ -51,59 +57,69 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="52dp"
-
+        android:drawableLeft="@drawable/passwd_icon"
         android:layout_marginEnd="24dp"
-        android:hint="请重复密码"
+        android:hint=" 请重复输入密码"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_regist_username" />
 
     <Button
         android:id="@+id/bt_regist_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="50dp"
         android:layout_gravity="start"
 
-        android:layout_marginBottom="108dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_icon"
         android:text="注册"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login_passwrod"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toTopOf="@+id/tv_re_regist_passwrod"
+        app:layout_constraintVertical_bias="0.6" />
 
     <EditText
         android:id="@+id/tv_SMS"
-        android:layout_width="118dp"
-        android:layout_height="44dp"
+        android:layout_width="162dp"
+        android:layout_height="46dp"
         android:layout_alignTop="@+id/bt_SMS"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/sms_icon"
+
         android:gravity="center"
-        android:hint="请输入验证码"
+        android:hint=" 请输入验证码"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:textSize="15dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_regist_register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_re_regist_passwrod" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_re_regist_passwrod"
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/bt_SMS"
         android:layout_width="105dp"
         android:layout_height="43dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/msm_icon"
+
         android:text="发送验证码"
+        app:layout_constraintBottom_toTopOf="@+id/bt_regist_register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_re_regist_passwrod" />
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_re_regist_passwrod"
+        app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

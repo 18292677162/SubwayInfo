@@ -1,5 +1,5 @@
 //
-// Created by Machenike on 2020/4/21.
+// Created by Pinna on 2020/4/21.
 //
 
 #ifndef SUBWAYINFO_CCURL_H
@@ -11,7 +11,7 @@ using namespace std;
 
 class cCurl {
 public:
-    cCurl(string url);
+    cCurl(string url, bool ingoreCA);
     ~cCurl();
 
     // 向远程服务器发送请求

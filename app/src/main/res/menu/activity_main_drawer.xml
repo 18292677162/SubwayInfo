@@ -7,12 +7,11 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/map"
-            android:listSelector="@drawable/map"
             android:title="出行规划" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:icon="@drawable/subway_icon"
+            android:title="附近地铁站查询" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/xian_subway"

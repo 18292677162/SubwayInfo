@@ -4,6 +4,14 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //在这里修改apk文件名
+                outputFileName = "快乘地铁.apk"
+            }
+    }
+
     defaultConfig {
         applicationId "com.example.subwayinfo"
         minSdkVersion 16
@@ -25,6 +33,7 @@ android {
             // 此条配置很重要，只生成一个平台
             abiFilters "armeabi"
         }
+
     }
 
     buildTypes {
@@ -72,7 +81,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.2.2'
     implementation 'androidx.navigation:navigation-ui:2.2.2'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0-beta01'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

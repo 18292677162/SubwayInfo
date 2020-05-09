@@ -1,12 +1,18 @@
 //
-// Created by Machenike on 2020/4/21.
+// Created by Pinna on 2020/4/21.
 //
 #include "cCurl.h"
 
-cCurl::cCurl(string url){
+cCurl::cCurl(string url, bool ingoreCA){
     this->_curl = curl_easy_init();
     // 设置url路径
     curl_easy_setopt(this->_curl, CURLOPT_URL, url.c_str());
+
+    // 忽略 CA
+    if(ingoreCA == true){
+        curl_easy_setopt(this->_curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_easy_setopt(this->_curl, CURLOPT_SSL_VERIFYPEER, false);
+    }
 }
 
 cCurl::~cCurl()

@@ -23,16 +23,97 @@
         android:roundIcon="@mipmap/subway_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.station.line1.Line1_zy_Activity"></activity>
+        <activity android:name=".ui.station.line4.Line4_bkz_Activity"></activity>
+        <activity android:name=".ui.station.line4.Line4_ysl_Activity" />
+        <activity android:name=".ui.station.line4.Line4_fcsel_Activity" />
+        <activity android:name=".ui.station.line4.Line4_fcjl_Activity" />
+        <activity android:name=".ui.station.line4.Line4_wjl_Activity" />
+        <activity android:name=".ui.station.line4.Line4_szyyy_Activity" />
+        <activity android:name=".ui.station.line4.Line4_cql_Activity" />
+        <activity android:name=".ui.station.line4.Line4_bhc_Activity" />
+        <activity android:name=".ui.station.line4.Line4_yjz_Activity" />
+        <activity android:name=".ui.station.line4.Line4_dmgb_Activity" />
+        <activity android:name=".ui.station.line4.Line4_dmg_Activity" />
+        <activity android:name=".ui.station.line4.Line4_hyd_Activity" />
+        <activity android:name=".ui.station.line4.Line4_dcs_Activity" />
+        <activity android:name=".ui.station.line4.Line4_hpm_Activity" />
+        <activity android:name=".ui.station.line4.Line4_jzkjdx_Activity" />
+        <activity android:name=".ui.station.line4.Line4_xakjdx_Activity" />
+        <activity android:name=".ui.station.line4.Line4_dtfry_Activity" />
+        <activity android:name=".ui.station.line4.Line4_qjcx_Activity" />
+        <activity android:name=".ui.station.line4.Line4_jht_Activity" />
+        <activity android:name=".ui.station.line4.Line4_htdd_Activity" />
+        <activity android:name=".ui.station.line4.Line4_ftl_Activity" />
+        <activity android:name=".ui.station.line4.Line4_dcaj_Activity" />
+        <activity android:name=".ui.station.line4.Line4_szdd_Activity" />
+        <activity android:name=".ui.station.line4.Line4_htdl_Activity" />
+        <activity android:name=".ui.station.line4.Line4_htxc_Activity" />
+        <activity android:name=".ui.station.line3.Line3_xhw_Activity" />
+        <activity android:name=".ui.station.line3.Line3_cbzx_Activity" />
+        <activity android:name=".ui.station.line3.Line3_tht_Activity" />
+        <activity android:name=".ui.station.line3.Line3_gtm_Activity" />
+        <activity android:name=".ui.station.line3.Line3_xjm_Activity" />
+        <activity android:name=".ui.station.line3.Line3_sjj_Activity" />
+        <activity android:name=".ui.station.line3.Line3_hjm_Activity" />
+        <activity android:name=".ui.station.line3.Line3_clgy_Activity" />
+        <activity android:name=".ui.station.line3.Line3_xnl_Activity" />
+        <activity android:name=".ui.station.line3.Line3_yxm_Activity" />
+        <activity android:name=".ui.station.line3.Line3_qls_Activity" />
+        <activity android:name=".ui.station.line3.Line3_bct_Activity" />
+        <activity android:name=".ui.station.line3.Line3_dyt_Activity" />
+        <activity android:name=".ui.station.line3.Line3_jxc_Activity" />
+        <activity android:name=".ui.station.line3.Line3_tbnl_Activity" />
+        <activity android:name=".ui.station.line3.Line3_kjl_Activity" />
+        <activity android:name=".ui.station.line3.Line3_ypm_Activity" />
+        <activity android:name=".ui.station.line3.Line3_zbbl_Activity" />
+        <activity android:name=".ui.station.line3.Line3_yhz_Activity" />
+        <activity android:name=".ui.station.line2.Line2_wqn_Activity" />
+        <activity android:name=".ui.station.line2.Line2_htc_Activity" />
+        <activity android:name=".ui.station.line2.Line2_fxy_Activity" />
+        <activity android:name=".ui.station.line2.Line2_sy_Activity" />
+        <activity android:name=".ui.station.line2.Line2_hzzx_Activity" />
+        <activity android:name=".ui.station.line2.Line2_wyj_Activity" />
+        <activity android:name=".ui.station.line2.Line2_xz_Activity" />
+        <activity android:name=".ui.station.line2.Line2_tyc_Activity" />
+        <activity android:name=".ui.station.line2.Line2_nsm_Activity" />
+        <activity android:name=".ui.station.line2.Line2_ynm_Activity" />
+        <activity android:name=".ui.station.line2.Line2_zl_Activity" />
+        <activity android:name=".ui.station.line2.Line2_aym_Activity" />
+        <activity android:name=".ui.station.line2.Line2_lsy_Activity" />
+        <activity android:name=".ui.station.line2.Line2_dmgx_Activity" />
+        <activity android:name=".ui.station.line2.Line2_stsg_Activity" />
+        <activity android:name=".ui.station.line2.Line2_fcwl_Activity" />
+        <activity android:name=".ui.station.line2.Line2_xzzx_Activity" />
+        <activity android:name=".ui.station.line2.Line2_ydgy_Activity" />
+        <activity android:name=".ui.station.line2.Line2_by_Activity" />
+        <activity android:name=".ui.station.line2.Line2_bkz_Activity" />
+        <activity android:name=".ui.station.line1.Line1_fzc_Activity" />
+        <activity android:name=".ui.station.line1.Line1_bp_Activity" />
+        <activity android:name=".ui.station.line1.Line1_ch_Activity" />
+        <activity android:name=".ui.station.line1.Line1_clp_Activity" />
+        <activity android:name=".ui.station.line1.Line1_wsl_Activity" />
+        <activity android:name=".ui.station.line1.Line1_thm_Activity" />
+        <activity android:name=".ui.station.line1.Line1_kfl_Activity" />
+        <activity android:name=".ui.station.line1.Line1_cym_Activity" />
+        <activity android:name=".ui.station.line1.Line1_wlk_Activity" />
+        <activity android:name=".ui.station.line1.Line1_bdj_Activity" />
+        <activity android:name=".ui.station.line1.Line1_sjq_Activity" />
+        <activity android:name=".ui.station.line1.Line1_yxm_Activity" />
+        <activity android:name=".ui.station.line1.Line1_ldl_Activity" />
+        <activity android:name=".ui.station.line1.Line1_kym_Activity" />
+        <activity android:name=".ui.station.line1.Line1_hcl_Activity" />
+        <activity android:name=".ui.station.line1.Line1_zy_Activity" />
         <activity android:name=".ui.station.line1.Line1_zh_Activity" />
         <activity android:name=".ui.station.line1.Line1_sq_Activity" />
         <activity android:name=".ui.station.line1.Line1_hwz_Activity" />
         <activity android:name=".StartActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- 欢迎界面 -->
         </activity>
         <activity android:name=".ui.login.RegistActivity" />
 
@@ -46,7 +127,8 @@
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

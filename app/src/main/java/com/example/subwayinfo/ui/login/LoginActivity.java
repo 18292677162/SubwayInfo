@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -57,10 +58,17 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //将自带的标题栏隐藏掉
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.hide();
+        }
+
         tv_login_username = (EditText) findViewById(R.id.tv_login_username);
         tv_login_password = (EditText) findViewById(R.id.tv_login_passwrod);
         bt_login = (Button) findViewById(R.id.bt_login);
         bt_regist = (Button) findViewById(R.id.bt_register);
+
 
         //获取权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -70,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean login_res = true;
+                boolean login_res = false;
 
                 // 用户名 密码
                 String username = tv_login_username.getText().toString();
@@ -111,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "登录成功，欢迎回来！", Toast.LENGTH_SHORT).show();
                 } else {
                     Log.e(Tag, "登录失败");
-                    Toast.makeText(getApplicationContext(), "登录失败！", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "用户名或密码错误，登录失败！", Toast.LENGTH_SHORT).show();
                 }
             }
         });

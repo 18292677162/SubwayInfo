@@ -1,5 +1,6 @@
 package com.example.subwayinfo.ui.login;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.subwayinfo.R;
@@ -62,6 +63,11 @@ public class RegistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regist);
 
+        //将自带的标题栏隐藏掉
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.hide();
+        }
 
         // 初始化控件
         Init();
@@ -164,8 +170,12 @@ public class RegistActivity extends AppCompatActivity {
                                     intent2.setClass(RegistActivity.this, LoginActivity.class);
                                     // 跳转
                                     startActivity(intent2);
+                                }else if(regist_res == false){
+                                    Toast.makeText(getApplicationContext(), "注册失败", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "由于未知原因，注册失败", Toast.LENGTH_SHORT).show();
                                 }
-                                Toast.makeText(getApplicationContext(), "注册失败", Toast.LENGTH_SHORT).show();
+
                             }
                         });
                     }else if (event == SMSSDK.EVENT_GET_VOICE_VERIFICATION_CODE){

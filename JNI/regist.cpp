@@ -37,9 +37,9 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_regist
     env->ReleaseStringUTFChars(j_password, password);
 
     // 向服务器发送请求
-    cCurl curl("http://120.26.173.34:8888/regist");
+    cCurl curl("https://120.26.173.34:8888/regist", true);
 
-    if(curl.send_post(json_str)){
+    if(curl.send_post(json_str) == false){
         __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-regist: send_post Error!\n");
         return JNI_FALSE;
     }
@@ -81,7 +81,7 @@ JNIEXPORT jboolean JNICALL Java_com_example_subwayinfo_SubwayJNI_regist
             __android_log_print(ANDROID_LOG_ERROR, TAG, "JNI-regist: regist Fail! reason = [%s]\n", reason.c_str());
     }
 
-    return JNI_TRUE;
+    return JNI_FALSE;
 }
 #ifdef __cplusplus
 }

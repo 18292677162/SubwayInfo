@@ -1,5 +1,6 @@
 package com.example.subwayinfo.ui.station.line1;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -11,5 +12,11 @@ public class Line1_zy_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_line1_zy);
+
+        //将自带的标题栏隐藏掉
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.hide();
+        }
     }
 }
